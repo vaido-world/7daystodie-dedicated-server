@@ -1,19 +1,31 @@
-@ECHO OFF
-curl "https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip" -O
-tar -xf "steamcmd.zip"
-mkdir "steamcmd"
-move "steamcmd.exe" "steamcmd\"
+@echo off
 
-cd "steamcmd\"
-steamcmd.exe "+login anonymous" "+force_install_dir ../7_days_to_die_dedicated_server/" "+app_update 294420" "+quit"
+setlocal enabledelayedexpansion
 
+IF NOT EXIST 7_days_to_die_dedicated_server\ (
+	IF NOT EXIST steamcmd\ (
+		curl "https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip" -O
+		tar -xf "steamcmd.zip"
+		mkdir "steamcmd"
+		move "steamcmd.exe" "steamcmd\"
 
-cd "..\"
+		cd "steamcmd\"
+		steamcmd.exe "+login anonymous" "+force_install_dir ../7_days_to_die_dedicated_server/" "+app_update 294420" "+quit"
+		cd "..\"
+	)
 
-for /f delims^=^"^ tokens^=4 %%i in ('curl -s https://api.github.com/repos/miniupnp/miniupnp/releases/latest ^| findstr ^"browser_download_url.*zip^""
-') do (
-curl --location "%%i" > "%%~nxi"
-set "miniupnp_filename=%%~nxi"
+)
+
+IF NOT EXIST upnpc-static.exe (
+	for /f delims^=^"^ tokens^=4 %%i in ('curl -s https://api.github.com/repos/miniupnp/miniupnp/releases/latest ^| findstr ^"browser_download_url.*zip^""
+	') do (
+	curl --location "%%i" > "%%~nxi"
+	set "miniupnp_filename=%%~nxi"
+	)
+		echo !miniupnp_filename! sdc
+	tar --extract --file=!miniupnp_filename! upnpc-static.exe
+	del "!miniupnp_filename!"
+
 )
 
 
@@ -26,10 +38,6 @@ for /f "usebackq tokens=2 delims=:" %%f in (`ipconfig ^| findstr /c:%ip_address_
 
 )
 
-
-tar --extract --file=%miniupnp_filename% upnpc-static.exe
-del "%miniupnp_filename%"
-
 upnpc-static -a %ip_address% 26900 26900 tcp
 upnpc-static -a %ip_address% 26900 26900 udp
 
@@ -38,5 +46,8 @@ upnpc-static -a %ip_address% 26902 26902 udp
 
 cd "7_days_to_die_dedicated_server\"
 startdedicated.bat
+
+
+
 
 pause
