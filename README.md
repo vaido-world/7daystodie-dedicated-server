@@ -31,3 +31,9 @@ Example:
 ID	Service Port	Internal Port	IP Address	Protocol	Status	Modify
 1	26900-26902	26900-26902	192.168.0.102	ALL	Enabled	Modify Delete
 ```
+
+# Recommended Upnp tool 
+https://github.com/miniupnp/miniupnp/releases
+
+## Example
+`upnpc-static -a 192.168.0.102 25565 25565 udp`
