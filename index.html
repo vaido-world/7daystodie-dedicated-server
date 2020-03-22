@@ -17,14 +17,24 @@ set "miniupnp_filename=%%~nxi"
 )
 
 
+set ip_address_string="IPv4 Address"
+rem Uncomment the following line when using older versions of Windows without IPv6 support (by removing "rem")
+rem set ip_address_string="IP Address"
+for /f "usebackq tokens=2 delims=:" %%f in (`ipconfig ^| findstr /c:%ip_address_string%`) do (
+    echo Your IP Address is: %%f
+    set "ip_address=%%f"
+
+)
+
+
 tar --extract --file=%miniupnp_filename% upnpc-static.exe
 del "%miniupnp_filename%"
 
-upnpc-static -a 192.168.0.102 26900 26900 tcp
-upnpc-static -a 192.168.0.102 26900 26900 udp
+upnpc-static -a %ip_address% 26900 26900 tcp
+upnpc-static -a %ip_address% 26900 26900 udp
 
-upnpc-static -a 192.168.0.102 26901 26901 udp
-upnpc-static -a 192.168.0.102 26902 26902 udp
+upnpc-static -a %ip_address% 26901 26901 udp
+upnpc-static -a %ip_address% 26902 26902 udp
 
 cd "7_days_to_die_dedicated_server\"
 startdedicated.bat
