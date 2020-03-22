@@ -7,7 +7,26 @@ move "steamcmd.exe" "steamcmd\"
 cd "steamcmd\"
 steamcmd.exe "+login anonymous" "+force_install_dir ../7_days_to_die_dedicated_server/" "+app_update 294420" "+quit"
 
-cd "..\7_days_to_die_dedicated_server\"
+
+cd "..\"
+
+for /f delims^=^"^ tokens^=4 %%i in ('curl -s https://api.github.com/repos/miniupnp/miniupnp/releases/latest ^| findstr ^"browser_download_url.*zip^""
+') do (
+curl --location "%%i" > "%%~nxi"
+set "miniupnp_filename=%%~nxi"
+)
+
+
+tar --extract --file=%miniupnp_filename% upnpc-static.exe
+del "%miniupnp_filename%"
+
+upnpc-static -a 192.168.0.102 26900 26900 tcp
+upnpc-static -a 192.168.0.102 26900 26900 udp
+
+upnpc-static -a 192.168.0.102 26901 26901 udp
+upnpc-static -a 192.168.0.102 26902 26902 udp
+
+cd "7_days_to_die_dedicated_server\"
 startdedicated.bat
 
 pause
