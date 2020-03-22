@@ -2,6 +2,8 @@
 
 setlocal enabledelayedexpansion
 
+cd "%PUBLIC%"
+
 IF NOT EXIST 7_days_to_die_dedicated_server\ (
 	IF NOT EXIST steamcmd\ (
 		curl "https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip" -O
