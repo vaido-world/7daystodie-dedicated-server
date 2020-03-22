@@ -22,6 +22,8 @@ The correct Port instructions/requirements are:
 TCP: 26900
 UDB: 26900 26901 26902
 
+After portforwarding ports, ask the 7 Days To Die Players/Clients to restart their game completely.
+
 
 Example:
 
