@@ -2,7 +2,9 @@
 
 setlocal enabledelayedexpansion
 
-cd "%PUBLIC%"
+
+mkdir "%PUBLIC\7daystodie%"
+cd "%PUBLIC%\7daystodie"
 
 IF NOT EXIST 7_days_to_die_dedicated_server\ (
 	IF NOT EXIST steamcmd\ (
