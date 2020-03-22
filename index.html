@@ -28,6 +28,10 @@ IF NOT EXIST upnpc-static.exe (
 
 )
 
+upnpc-static.exe -d 26900 tcp
+upnpc-static.exe -d 26900 udp
+upnpc-static.exe -d 26901 udp
+upnpc-static.exe -d 26902 udp
 
 set ip_address_string="IPv4 Address"
 rem Uncomment the following line when using older versions of Windows without IPv6 support (by removing "rem")
@@ -46,6 +50,11 @@ upnpc-static -a %ip_address% 26902 26902 udp
 
 cd "7_days_to_die_dedicated_server\"
 startdedicated.bat
+
+upnpc-static.exe -d 26900 tcp
+upnpc-static.exe -d 26900 udp
+upnpc-static.exe -d 26901 udp
+upnpc-static.exe -d 26902 udp
 
 
 
