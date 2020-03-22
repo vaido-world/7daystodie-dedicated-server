@@ -1,0 +1,13 @@
+@ECHO OFF
+curl "https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip" -O
+tar -xf "steamcmd.zip"
+mkdir "steamcmd"
+move "steamcmd.exe" "steamcmd\"
+
+cd "steamcmd\"
+steamcmd.exe "+login anonymous" "+force_install_dir ../7_days_to_die_dedicated_server/" "+app_update 294420" "+quit"
+
+cd "..\7_days_to_die_dedicated_server\"
+startdedicated.bat
+
+pause
