@@ -19,3 +19,16 @@ app_update 294420
 root@Getspace-VM5728-m5t:/# find . -name 7dtd
 cd ./root/.steam/steamcmd/7dtd
 ./startserver.sh ./startserver.sh -configfile=serverconfig.xml
+
+
+
+[1gb ram server]
+root@Getspace-VM5728-m5t:~/.steam/steamcmd/7dtd/7DaysToDieServer_Data# nano  output_log__2020-06-14__09-15-56.txt
+
+OutOfMemoryException: Out of memory
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_ves_icall_array_new_specific(intptr,$
+  at TGALoader.LoadTGAAsArrayThreaded (System.String fileName, System.Int32& w, System.Int32& h) [0$
+  at ChunkProviderGenerateWorldFromRaw+<Init>d__17.MoveNext () [0x0097a] in <547af08b786b418cbfcf3e$
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.I$
+
+(Filename: <547af08b786b418cbfcf3ef2ec18045a> Line: 0)
