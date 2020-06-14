@@ -32,3 +32,11 @@ OutOfMemoryException: Out of memory
   at UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.I$
 
 (Filename: <547af08b786b418cbfcf3ef2ec18045a> Line: 0)
+
+
+In the serverconfig.xml
+
+<property name="GameWorld"						value="RWG"/>			<!-- "RWG" (see WorldGenSeed and WorldGenSize options below) or any already existing world name in the Worlds folder (currently shipping with e.g. "Navezgane", "PREGEN01", ...) -->
+	<property name="WorldGenSeed"					value="asdf"/>				<!-- If RWG this is the seed for the generation of the new world. If a world with the resulting name already exists it will simply load it -->
+	<property name="WorldGenSize"					value="2048"/>				<!-- If RWG this controls the width and height of the created world. It is also used in combination with WorldGenSeed to create the internal RWG seed thus also creating a unique map name even if using the same WorldGenSeed. Has to be between 2048 and 16384, though large map sizes will take long to generate / download / load -->
+	
