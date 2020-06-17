@@ -4,3 +4,8 @@ http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=C1F9B7B9DDA
 steamcmd.exe
 Steam>login anonymous
 Steam>app_info_print 251570
+
+
+
+// not working from random client, needs testing as a server
+https://api.steampowered.com/ISteamApps/UpToDateCheck/v1/?version=18&appid=251570
