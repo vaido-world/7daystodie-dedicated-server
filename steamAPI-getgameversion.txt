@@ -1,0 +1,6 @@
+https://steamcommunity.com/dev/registerkey
+http://api.steampowered.com/ISteamUserStats/GetSchemaForGame/v2/?key=C1F9B7B9DDA6F68898062DAEBF73316F&appid=251570&format=xml
+
+steamcmd.exe
+Steam>login anonymous
+Steam>app_info_print 251570
