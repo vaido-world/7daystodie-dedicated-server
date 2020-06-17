@@ -9,3 +9,8 @@ Steam>app_info_print 251570
 
 // not working from random client, needs testing as a server
 https://api.steampowered.com/ISteamApps/UpToDateCheck/v1/?version=18&appid=251570
+
+
+
+List of all appids
+https://api.steampowered.com/ISteamApps/GetAppList/v2/
