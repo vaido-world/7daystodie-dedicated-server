@@ -57,6 +57,11 @@ free -h
 sudo apt-get update -y
 sudo apt-get install -y xmlstarlet
 
+xmlstarlet edit \
+  --update "//property[@name='ServerName']/@value" \
+  --value "7 Days To Die Public PVP | XP 1000 | Loot 300" serverconfig.xml
+
+
 
 [1gb ram server]
 root@Getspace-VM5728-m5t:~/.steam/steamcmd/7dtd/7DaysToDieServer_Data# nano  output_log__2020-06-14__09-15-56.txt
