@@ -20,6 +20,13 @@ passwd steam
 cd /home/steam
 su steam
 
+
+sudo apt update 
+sudo apt upgrade
+// sudo apt dist-upgrade
+
+
+
 sudo add-apt-repository multiverse
 sudo dpkg --add-architecture i386
 sudo apt update
