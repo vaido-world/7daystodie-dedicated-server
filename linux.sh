@@ -65,6 +65,11 @@ xmlstarlet edit --inplace \
   --update "//property[@name='ServerName']/@value" \
   --value "[EU] 7 Days To Die Vanilla Public PVP | XP 1000 | Loot 300" serverconfig.xml
 
+# Add Website to the Description of the Game Server in the Lobby
+xmlstarlet edit --inplace \
+  --update "//property[@name='ServerWebsiteURL']/@value" \
+  --value "vaido.world" serverconfig.xml
+
 # Change Default 7DTD Game Server Description
 xmlstarlet edit --inplace \
   --update "//property[@name='ServerDescription']/@value" \
