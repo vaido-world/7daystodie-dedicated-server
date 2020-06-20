@@ -95,6 +95,24 @@ xmlstarlet edit --inplace \
   --update "//property[@name='AirDropFrequency']/@value" \
   --value "36" serverconfig.xml
   
+  
+  
+# Server Admin File name by default is here
+#  ./home/steam/.local/share/7DaysToDie/Saves/serveradmin.xml
+
+  
+# This is what serverconfig.xml has to tell us about serveradmin.xml  
+#   <property name="AdminFileName" value="serveradmin.xml"/>
+#  <!-- Server admin file name. Path relative to the SaveGameFolder -->
+#  <!-- <property name="UserDataFolder"                          value="absolute path" /> -->
+#  <!-- Use this to override where the server stores all generated data, including RWG generated worlds. Do not forget to uncomment the entry! -->
+#  <!-- <property name="SaveGameFolder"                          value="absolute path" /> -->
+#  <!-- Use this to only override the save game path. Do not forget to uncomment the entry! -->
+#  <!-- Other technical settings -->
+  
+  
+  
+  
 
 
 
