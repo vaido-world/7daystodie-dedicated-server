@@ -60,10 +60,7 @@ free -h
 sudo apt-get update -y
 sudo apt-get install -y xmlstarlet
 
-xmlstarlet edit --inplace \
-  --update "//property[@name='ServerName']/@value" \
-  --value "7 Days To Die Vanilla Public PVP | XP 1000 | Loot 300" serverconfig.xml
-
+# Change Default 7DTD Game Server Name
 xmlstarlet edit --inplace \
   --update "//property[@name='ServerName']/@value" \
   --value "7 Days To Die Vanilla Public PVP | XP 1000 | Loot 300" serverconfig.xml
@@ -71,32 +68,32 @@ xmlstarlet edit --inplace \
 # The amount of Experience the Players get after Killing a zombie, Looting and other activities
 xmlstarlet edit --inplace \
   --update "//property[@name='XPMultiplier']/@value" \
-  --value "1000" serverconfig.xml
+  --value "1000" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
 # Drop on Death Backpack only
 xmlstarlet edit --inplace \
   --update "//property[@name='DropOnDeath']/@value" \
-  --value "3" serverconfig.xml
+  --value "3" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
 # The amount of Loot that Players will find in the World Containers
 xmlstarlet edit --inplace \
   --update "//property[@name='LootAbundance']/@value" \
-  --value "300" serverconfig.xml
+  --value "300" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
 # Respawn Loot twice as often
 xmlstarlet edit --inplace \
   --update "//property[@name='LootRespawnDays']/@value" \
-  --value "15" serverconfig.xml
+  --value "15" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
  
 # Let the administrator to join the server even if the server is full
 xmlstarlet edit --inplace \
   --update "//property[@name='ServerAdminSlots']/@value" \
-  --value "1" serverconfig.xml
+  --value "1" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
 # Make AirDrop Twice as often
 xmlstarlet edit --inplace \
   --update "//property[@name='AirDropFrequency']/@value" \
-  --value "36" serverconfig.xml
+  --value "36" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
   
   
   
