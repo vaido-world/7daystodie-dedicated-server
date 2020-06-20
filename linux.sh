@@ -80,8 +80,13 @@ xmlstarlet edit --inplace \
 
 # Respawn Loot twice as often
 xmlstarlet edit --inplace \
-  --update "//property[@name='LootRespawnDays"']/@value" \
+  --update "//property[@name='LootRespawnDays']/@value" \
   --value "15" serverconfig.xml
+ 
+# Let the administrator to join the server even if the server is full
+xmlstarlet edit --inplace \
+  --update "//property[@name='ServerAdminSlots"']/@value" \
+  --value "1" serverconfig.xml
 
 
 [1gb ram server]
