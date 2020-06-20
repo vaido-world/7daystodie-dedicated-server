@@ -48,7 +48,10 @@ screen  ./startserver.sh ./startserver.sh -configfile=serverconfig.xml
 
 
 // Create new Screen Window
-CTRL + AC 
+CTRL + A and later press C 
+
+// Show all Screen Windows
+// CTRL + A and later press SHift + "
 
 
 //Check how many rams are used: 
