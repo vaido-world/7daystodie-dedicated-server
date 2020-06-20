@@ -61,6 +61,22 @@ xmlstarlet edit --inplace \
   --update "//property[@name='ServerName']/@value" \
   --value "7 Days To Die Vanilla Public PVP | XP 1000 | Loot 300" serverconfig.xml
 
+xmlstarlet edit --inplace \
+  --update "//property[@name='ServerName']/@value" \
+  --value "7 Days To Die Vanilla Public PVP | XP 1000 | Loot 300" serverconfig.xml
+
+xmlstarlet edit --inplace \
+  --update "//property[@name='XPMultiplier']/@value" \
+  --value "1000" serverconfig.xml
+
+# Drop on Death Backpack only
+xmlstarlet edit --inplace \
+  --update "//property[@name='DropOnDeath']/@value" \
+  --value "3" serverconfig.xml
+
+xmlstarlet edit --inplace \
+  --update "//property[@name='LootAbundance']/@value" \
+  --value "300" serverconfig.xml
 
 
 [1gb ram server]
