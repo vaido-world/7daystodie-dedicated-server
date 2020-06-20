@@ -212,3 +212,12 @@ On Windows 10 The generated worlds are stored in C:\Users\vaida\AppData\Roaming\
 Change Priority for apache is not helpful, but here it is:
 ps -elf
 nice 1 $pid
+
+# list attached screens
+screen -ls
+
+# Reattach
+screen -r
+
+# Move between windows
+CTRL + A and then press A
