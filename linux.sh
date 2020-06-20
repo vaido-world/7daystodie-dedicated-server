@@ -70,7 +70,7 @@ xmlstarlet edit --inplace \
   --update "//property[@name='ServerDescription']/@value" \
   --value "[EU] 7 Days To Die 
   Vanilla Public PVP | XP 1000 | Loot 300
-  The Dedicated server is based in Europe/Lithuania.
+The Dedicated server is based in Europe/Lithuania.
 If you can, support this server. 
 Contact the owner: vaidas.boqsc@gmail.com
 
