@@ -57,7 +57,7 @@ free -h
 sudo apt-get update -y
 sudo apt-get install -y xmlstarlet
 
-xmlstarlet edit \
+xmlstarlet edit --inplace \
   --update "//property[@name='ServerName']/@value" \
   --value "7 Days To Die Vanilla Public PVP | XP 1000 | Loot 300" serverconfig.xml
 
