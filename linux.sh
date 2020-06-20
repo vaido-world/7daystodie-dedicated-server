@@ -74,6 +74,7 @@ xmlstarlet edit --inplace \
   --update "//property[@name='DropOnDeath']/@value" \
   --value "3" serverconfig.xml
 
+# The amount of Loot that Players will find in the World Containers
 xmlstarlet edit --inplace \
   --update "//property[@name='LootAbundance']/@value" \
   --value "300" serverconfig.xml
