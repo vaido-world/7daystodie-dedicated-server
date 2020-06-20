@@ -4,6 +4,10 @@ apt-get update
 
 su -
 
+Fix add-apt-repository: command not found error
+sudo apt-get install software-properties-common
+
+
 useradd -m steam
 usermod --append --groups sudo steam
 passwd steam
