@@ -87,6 +87,14 @@ No client side mods.
 Any suggestions are Welcome." serverconfig.xml
 
 
+# Change the Default 8 Player slot to 20
+xmlstarlet edit --inplace \
+  --update "//property[@name='ServerMaxPlayerCount']/@value" \
+  --value "20" serverconfig.xml
+
+
+
+
 # The amount of Experience the Players get after Killing a zombie, Looting and other activities
 xmlstarlet edit --inplace \
   --update "//property[@name='XPMultiplier']/@value" \
