@@ -1,6 +1,7 @@
 Use Btivise SSH client 8.43
 
 
+
 https://superuser.com/questions/1527250/apt-update-error-with-ubuntu-18-10-cosmic-version
 sed -i 's/us.archive/old-releases/g' input.txt
 apt-get update
@@ -16,6 +17,9 @@ usermod --append --groups sudo steam
 passwd steam
 cd /home/steam
 su steam
+
+// pwd
+// cd $home
 
 
 sudo apt update 
