@@ -2,6 +2,8 @@ https://superuser.com/questions/1527250/apt-update-error-with-ubuntu-18-10-cosmi
 sed -i 's/us.archive/old-releases/g' input.txt
 apt-get update
 
+su -
+
 useradd -m steam
 cd /home/steam
 su steam
