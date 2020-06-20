@@ -78,6 +78,11 @@ xmlstarlet edit --inplace \
   --update "//property[@name='LootAbundance']/@value" \
   --value "300" serverconfig.xml
 
+# Respawn Loot twice as often
+xmlstarlet edit --inplace \
+  --update "//property[@name='LootRespawnDays"']/@value" \
+  --value "15" serverconfig.xml
+
 
 [1gb ram server]
 root@Getspace-VM5728-m5t:~/.steam/steamcmd/7dtd/7DaysToDieServer_Data# nano  output_log__2020-06-14__09-15-56.txt
