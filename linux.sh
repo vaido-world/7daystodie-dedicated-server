@@ -5,6 +5,7 @@ apt-get update
 su -
 
 useradd -m steam
+passwd steam
 cd /home/steam
 su steam
 
