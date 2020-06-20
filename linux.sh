@@ -95,7 +95,23 @@ xmlstarlet edit --inplace \
   --update "//property[@name='AirDropFrequency']/@value" \
   --value "36" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
   
+# Enable Random World Generator for the Server
+xmlstarlet edit --inplace \
+  --update "//property[@name='GameWorld']/@value" \
+  --value "RWG" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
   
+# Set a Random Seed for the Random World Generator
+xmlstarlet edit --inplace \
+  --update "//property[@name='WorldGenSeed']/@value" \
+  --value "1354778" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+  
+# Set the map size for the Random World Generator
+# Has to be between 2048 and 16384
+xmlstarlet edit --inplace \
+  --update "//property[@name='WorldGenSize']/@value" \
+  --value "2048" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+
+
   
 # Server Admin File name by default is here
 #  ./home/steam/.local/share/7DaysToDie/Saves/serveradmin.xml
