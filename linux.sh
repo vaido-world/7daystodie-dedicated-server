@@ -21,7 +21,7 @@ root@Getspace-VM5728-m5t:/# find . -name 7dtd
 cd ./root/.steam/steamcmd/7dtd
 ./startserver.sh ./startserver.sh -configfile=serverconfig.xml
 
-
+screen
 
 [1gb ram server]
 root@Getspace-VM5728-m5t:~/.steam/steamcmd/7dtd/7DaysToDieServer_Data# nano  output_log__2020-06-14__09-15-56.txt
