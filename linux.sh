@@ -103,7 +103,9 @@ xmlstarlet edit --inplace \
 # In this serveradmin.xml file admin can be asigned by adding Steam ID:
 # BoQsc steamID64 76561198072601792
 
-xmlstarlet ed -s /adminTools/admins -t elem -n admin -v "" -i /adminTools/admins/admin -t attr -n steamID -v 76561198072601792 /home/steam/.local/share/7DaysToDie/Saves/serveradmin.xml
+
+xmlstarlet ed --inplace -s /adminTools/admins -t elem -n admin -v "" -i /adminTools/admins/admin -t attr -n steamID -v 76561198072601792 -i /adminTools/admins/admin -t attr -n permission_level -v 0 /home/steam/.local/share/7DaysToDie/Saves/serveradmin.xml
+
 
 
   
