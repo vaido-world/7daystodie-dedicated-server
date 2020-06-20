@@ -206,3 +206,9 @@ Generating World was unsuccessful, 2gb of RAM is not enough.
 
 
 On Windows 10 The generated worlds are stored in C:\Users\vaida\AppData\Roaming\7DaysToDie
+
+
+
+Change Priority for apache is not helpful, but here it is:
+ps -elf
+nice 1 $pid
