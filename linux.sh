@@ -87,8 +87,15 @@ xmlstarlet edit --inplace \
  
 # Let the administrator to join the server even if the server is full
 xmlstarlet edit --inplace \
-  --update "//property[@name='ServerAdminSlots"']/@value" \
+  --update "//property[@name='ServerAdminSlots']/@value" \
   --value "1" serverconfig.xml
+
+# Make AirDrop Twice as often
+xmlstarlet edit --inplace \
+  --update "//property[@name='AirDropFrequency']/@value" \
+  --value "36" serverconfig.xml
+  
+
 
 
 [1gb ram server]
