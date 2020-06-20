@@ -65,6 +65,23 @@ xmlstarlet edit --inplace \
   --update "//property[@name='ServerName']/@value" \
   --value "[EU] 7 Days To Die Vanilla Public PVP | XP 1000 | Loot 300" serverconfig.xml
 
+# Change Default 7DTD Game Server Description
+xmlstarlet edit --inplace \
+  --update "//property[@name='ServerDescription']/@value" \
+  --value "[EU] 7 Days To Die 
+  Vanilla Public PVP | XP 1000 | Loot 300
+  The Dedicated server is based in Europe/Lithuania.
+If you can, support this server. 
+Contact the owner: vaidas.boqsc@gmail.com
+
+The Server is as close to the Vanilla as possible, 
+but focused on less tiring gameplay.
+
+No client side mods.
+
+Any suggestions are Welcome." serverconfig.xml
+
+
 # The amount of Experience the Players get after Killing a zombie, Looting and other activities
 xmlstarlet edit --inplace \
   --update "//property[@name='XPMultiplier']/@value" \
