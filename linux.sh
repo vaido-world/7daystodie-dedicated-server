@@ -100,6 +100,8 @@ xmlstarlet edit --inplace \
 # Server Admin File name by default is here
 #  ./home/steam/.local/share/7DaysToDie/Saves/serveradmin.xml
 
+# In this serveradmin.xml file admin can be asigned by adding Steam ID:
+# BoQsc steamID64 76561198072601792
   
 # This is what serverconfig.xml has to tell us about serveradmin.xml  
 #   <property name="AdminFileName" value="serveradmin.xml"/>
