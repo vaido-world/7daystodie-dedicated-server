@@ -154,6 +154,8 @@ xmlstarlet edit --inplace \
 #  ./home/steam/.local/share/7DaysToDie/Saves/serveradmin.xml
 
 # Correction: Loading permissions file at '/root/.local/share/7DaysToDie/Saves/serveradmin.xml'
+# steam linux user can access this file, however cannot write to the root directory unless it executes the write command with sudo permissions?
+# This is also where the Generated Worlds are stored
 
 # In this serveradmin.xml file admin can be asigned by adding Steam ID:
 # BoQsc steamID64 76561198072601792
