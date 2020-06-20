@@ -44,9 +44,15 @@ app_update 294420
 // root@Getspace-VM5728-m5t:/# find . -name 7dtd
 // cd ./root/.steam/steamcmd/7dtd
 cd .steam/steamcmd/7dtd
-./startserver.sh ./startserver.sh -configfile=serverconfig.xml
+screen  ./startserver.sh ./startserver.sh -configfile=serverconfig.xml
 
-screen
+
+// Create new Screen Window
+CTRL + AC 
+
+
+//Check how many rams are used: 
+free -h
 
 [1gb ram server]
 root@Getspace-VM5728-m5t:~/.steam/steamcmd/7dtd/7DaysToDieServer_Data# nano  output_log__2020-06-14__09-15-56.txt
