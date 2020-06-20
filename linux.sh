@@ -54,6 +54,10 @@ CTRL + AC
 //Check how many rams are used: 
 free -h
 
+sudo apt-get update -y
+sudo apt-get install -y xmlstarlet
+
+
 [1gb ram server]
 root@Getspace-VM5728-m5t:~/.steam/steamcmd/7dtd/7DaysToDieServer_Data# nano  output_log__2020-06-14__09-15-56.txt
 
