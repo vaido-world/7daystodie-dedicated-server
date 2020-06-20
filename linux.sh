@@ -43,7 +43,7 @@ force_install_dir  ./7dtd
 app_update 294420
 // root@Getspace-VM5728-m5t:/# find . -name 7dtd
 // cd ./root/.steam/steamcmd/7dtd
-cd .steam/steamcmd/7dtd
+cd /home/steam/.steam/steamcmd/7dtd
 screen  ./startserver.sh ./startserver.sh -configfile=serverconfig.xml
 
 
