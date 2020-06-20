@@ -4,6 +4,7 @@ apt-get update
 
 useradd -m steam
 cd /home/steam
+su steam
 
 sudo add-apt-repository multiverse
 sudo dpkg --add-architecture i386
