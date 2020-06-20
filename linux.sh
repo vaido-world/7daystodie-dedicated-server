@@ -111,6 +111,13 @@ xmlstarlet edit --inplace \
   --update "//property[@name='WorldGenSize']/@value" \
   --value "2048" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
+# Set the Map Name for the Random World Generator
+xmlstarlet edit --inplace \
+  --update "//property[@name='GameName']/@value" \
+  --value "VaidoWorld" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+
+
+
 
   
 # Server Admin File name by default is here
