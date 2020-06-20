@@ -7,9 +7,6 @@ apt-get update
 
 su -
 
-Fix add-apt-repository: command not found error
-sudo apt-get install software-properties-common
-
 fix do-release-upgrade: command not found error
 sudo apt install ubuntu-release-upgrader-core
 
@@ -25,6 +22,8 @@ sudo apt update
 sudo apt upgrade
 // sudo apt dist-upgrade
 
+Fix add-apt-repository: command not found error
+sudo apt-get install software-properties-common
 
 
 sudo add-apt-repository multiverse
