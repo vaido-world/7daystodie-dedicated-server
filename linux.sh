@@ -10,6 +10,9 @@ su -
 Fix add-apt-repository: command not found error
 sudo apt-get install software-properties-common
 
+fix do-release-upgrade: command not found error
+sudo apt install ubuntu-release-upgrader-core
+
 
 useradd -m steam
 usermod --append --groups sudo steam
