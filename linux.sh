@@ -126,6 +126,13 @@ xmlstarlet edit --inplace \
   --update "//property[@name='AirDropFrequency']/@value" \
   --value "36" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
   
+# Make AirDrop Visible on Map
+xmlstarlet edit --inplace \
+  --update "//property[@name='AirDropMarker']/@value" \
+  --value "true" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+  
+
+  
 # Enable Random World Generator for the Server
 xmlstarlet edit --inplace \
   --update "//property[@name='GameWorld']/@value" \
