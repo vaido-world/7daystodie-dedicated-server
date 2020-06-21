@@ -8,7 +8,9 @@ keyboard key to activate flight mode and pressing `Space` key to fly.
 While In-game, Press `F1` keyboard button.  
 In the **Command Console Prompt** type: `creativemenu`
 
-### Using 
+### Using Dev Blocks
+Dev blocks are tools for administrators to efficiently deal with  
+the server and have fun while administrating.
 
 
 ## God Mode and Debug Menu
