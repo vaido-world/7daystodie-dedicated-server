@@ -13,6 +13,7 @@ In the Creative Menu it is often not realized that it is possible to toggle Dev 
 Dev blocks are tools for administrators to efficiently deal with  
 the server and have fun while administrating.
 
+![Toggling Dev Blocks](toggle-dev-blocks.png)
 
 ## God Mode and Debug Menu
 As mentioned if you are an Administrator and are Allowed use **God Mode**.  
