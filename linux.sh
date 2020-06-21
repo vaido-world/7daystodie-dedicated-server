@@ -147,9 +147,13 @@ xmlstarlet edit --inplace \
   --update "//property[@name='GameName']/@value" \
   --value "VaidoWorld" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
+# Enable Control Panel for Direct Control of the GameServer
+xmlstarlet edit --inplace \
+  --update "//property[@name='ControlPanelEnabled']/@value" \
+  --value "true" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
-
-
+# Also needs XML Password import from other file and make git ignore that file since it will hold the password for the control panel
+#?
   
 # Server Admin File name by default is here
 #  ./home/steam/.local/share/7DaysToDie/Saves/serveradmin.xml
