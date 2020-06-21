@@ -7,3 +7,8 @@ keyboard key to activate flight mode and pressing `Space` key to fly.
 ### Toggle Creative Menu
 While In-game, Press `F1` keyboard button.  
 In the **Command Console Prompt** type: `creativemenu`
+
+
+## God Mode and Debug Menu
+As mentioned if you are an Administrator and you are allowed to use God Mode.  
+You will get the benefit of invicibility.
