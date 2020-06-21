@@ -6,18 +6,17 @@
 
 		<append xpath="/windows">
 			<window name="ingameMenu" pos="360,0" size="408,1080" controller="InGameMenuWindow" cursor_area="true">
-
+				<texture name="ExitScreen" depth="0" size="408,1080" pos="-150,550" texture="@https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/smx_menu_background.png" material="Materials/Transparent Colored" />
 				<sprite name="SMXingameMenuBG" depth="2" pos="60,0" size="408,1080" atlas="uiAtlas" sprite="smx_menu_background" color="[menuElementsMenuBG]" pivot="center" globalopacitymod="1.5" />
 				<sprite name="SMXingameMenuLogo" depth="3" pos="60,140" size="588,588" atlas="uiAtlas" sprite="smx_menu_ingame_logo_v2" pivot="center" globalopacitymod="1.5" />
 
 				<grid name="SMXingameMenuGrid" depth="3" pos="50,-120" rows="13" cell_width="230" cell_height="70" repeat_content="false" arrangement="vertical">
 					<smx_mainmenubutton_1 name="btnExportPrefab" style="smx_menu_button" caption_key="xuiMenuExportPrefab" />
-					<texture name="ExitScreen" depth="0" size="960,540" pos="-480,270" texture="@https://thumbs.dreamstime.com/b/example-red-tag-example-red-square-price-tag-117502755.jpg" material="Materials/Transparent Colored" />
 					<smx_mainmenubutton_2 name="btnInvite" style="smx_menu_button" caption_key="xuiMenuInvite" />
 					<smx_mainmenubutton_3 name="btnOptions" style="smx_menu_button" caption_key="xuiMenuOptions" />
 					<smx_mainmenubutton_2 name="btnHelp" style="smx_menu_button" caption_key="xuiMenuHelp" />
 					<smx_mainmenubutton_1 name="btnSave" style="smx_menu_button" caption_key="xuiMenuSave" />
-					<rect><sprite name="SMXmenuSep" depth="1" pos="-140,-24" size="301,5" atlas="uiAtlas" sprite="smx_menu_separator" color="[menuElementsMenuLine]" /></rect>
+					<rect><sprite name="SMXmenuSep" depth="1" pos="-140,-24" size="408,1080" atlas="uiAtlas" sprite="smx_menu_separator" color="[menuElementsMenuLine]" /></rect>
 					<smx_mainmenubutton_1 name="btnExit" style="smx_menu_button" caption_key="xuiMenuExit" />
 				</grid>
 
