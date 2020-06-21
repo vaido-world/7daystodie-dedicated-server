@@ -64,7 +64,7 @@ sudo apt-get install -y xmlstarlet
 # Change Default 7DTD Game Server Name
 xmlstarlet edit --inplace \
   --update "//property[@name='ServerName']/@value" \
-  --value "[EU] 7 Days To Die Vanilla Public PVP | XP 1000 | Loot 300" serverconfig.xml
+  --value "[EU] 7 Days To Die Vanilla Public PVP | XP 1000% | Loot 300%" serverconfig.xml
 
 # Add Website to the Description of the Game Server in the Lobby
 xmlstarlet edit --inplace \
