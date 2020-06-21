@@ -1,0 +1,45 @@
+Enable autopdate in the appmanifest.acf for steamcmd
+Change Game Server Description Website to 7days.vaido.world
+Change GameSaves folder and serveradmin.xml to the location of the Server itself instead of Root
+Create Mods folder
+	Add modlet to show UI information when pressing Esc button
+Improve Website design
+Mitingate 7days.vaido.world to another website if the GameServer is unresponsive.
+Enable Access to Admin Control Panel
+
+Add Game Server Starter command Alias for the Ubuntu Server
+
+Expose the Game Server Settings to the Github Repository
+Make Server Game World Map Downloadable externally from 7days.vaido.world
+Make a Custom Game Server Spawn Point
+
+Game Server Setup
+Install Apache and Replace Default WebPage with the Customized Index Page
+Point a DNS Subdomain 7days.vaido.world [A Record] to the Dedicated Server
+
+
+Autoconfiguration Setup
+Change Server Name
+Change Server Description
+Change Server Description Website
+Change Server Players Slot
+Change Server Admin Slot
+Change Server Player Experience Gain
+Change Server Player Death Drop
+Change Server World Loot Abundance
+?Change Server Game Save Folder
+?Change Server Max Spawned Zombies
+?Change Server Max Spawned Animals
+Change Server Airdrop Frequency
+
+Add Player with SteamID as Game Server Admin
+
+
+Remove Old New Player starting Quest
+Improve the New Player starting Quest with Game Server Modlet
+
+
+Added SMXmenu Modlet | Redesigns ESC Menu and Other in-game UI elements
+
+
+
