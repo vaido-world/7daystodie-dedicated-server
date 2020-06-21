@@ -9,6 +9,7 @@ While In-game, Press `F1` keyboard button.
 In the **Command Console Prompt** type: `creativemenu`
 
 ### Using Dev Blocks
+In the Creative Menu it is often not realized that it is possible to toggle Dev Blocks.  
 Dev blocks are tools for administrators to efficiently deal with  
 the server and have fun while administrating.
 
