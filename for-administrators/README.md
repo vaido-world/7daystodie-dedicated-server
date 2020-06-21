@@ -11,7 +11,7 @@ In the **Command Console Prompt** type: `creativemenu`
 
 ## God Mode and Debug Menu
 As mentioned if you are an Administrator and are Allowed use **God Mode**.  
-You will get the **benefit of invicibility**, after you enable **Debug Menu**.
+You will get the **benefit of invicibility**, after you enable **Debug Menu** for yourself.
 
 ### Toggle God Mode and Debug Menu
 While In-game, Press `F1` keyboard button.  
