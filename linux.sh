@@ -64,12 +64,12 @@ sudo apt-get install -y xmlstarlet
 # Change Default 7DTD Game Server Name
 xmlstarlet edit --inplace \
   --update "//property[@name='ServerName']/@value" \
-  --value "[EU] 7 Days To Die Vanilla Public PVP | XP 1000% | Loot 300%" serverconfig.xml
+  --value "[EU] 7 Days To Die Vanilla Public PVP | XP 1000% | Loot 300%" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
 # Add Website to the Description of the Game Server in the Lobby
 xmlstarlet edit --inplace \
   --update "//property[@name='ServerWebsiteURL']/@value" \
-  --value "7days.vaido.world" serverconfig.xml
+  --value "7days.vaido.world" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
 # Change Default 7DTD Game Server Description
 xmlstarlet edit --inplace \
@@ -85,13 +85,13 @@ but focused on less tiring gameplay.
 
 No client side mods.
 
-Any suggestions are Welcome." serverconfig.xml
+Any suggestions are Welcome." /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
 
 # Change the Default 8 Player slot to 20
 xmlstarlet edit --inplace \
   --update "//property[@name='ServerMaxPlayerCount']/@value" \
-  --value "20" serverconfig.xml
+  --value "20" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
 
 
