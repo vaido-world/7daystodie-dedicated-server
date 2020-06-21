@@ -4,5 +4,7 @@ It is probably because you are using Shell that has no Command History implement
 Launch bash and use bash shell to get the command history working.  
 By simply typing `bash`, and you will be able to use command history again.  
 
+Also change the default shell for the users to `bash`.
+
 
 ![An example of the command history problem while connecting with ssh](image.png)
