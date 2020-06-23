@@ -6,7 +6,7 @@ https://superuser.com/questions/1527250/apt-update-error-with-ubuntu-18-10-cosmi
 sed -i 's/us.archive/old-releases/g' input.txt
 apt-get update
 
-su -
+// su -
 
 // fix do-release-upgrade: command not found error
 // sudo apt install ubuntu-release-upgrader-core
