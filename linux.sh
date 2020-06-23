@@ -165,7 +165,7 @@ xmlstarlet edit --inplace \
 
 
 # Copy Older Game Save Folder to the New Game Save Folder Location
-sudo cp -r /root/.local/share/7DaysToDie/Saves/ /home/steam/.local/share/7DaysToDie/
+sudo cp -r /root/.local/share/7DaysToDie/Saves/ /home/steam/.steam/steamcmd/7dtd/
 
 # Change Default Game Save Folder for the Server (Also Changes)
 SAVEGAME_FOLDER_PROPERTY="$(xmlstarlet sel -t -v \
