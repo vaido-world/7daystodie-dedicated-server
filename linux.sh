@@ -8,8 +8,8 @@ apt-get update
 
 su -
 
-fix do-release-upgrade: command not found error
-sudo apt install ubuntu-release-upgrader-core
+// fix do-release-upgrade: command not found error
+// sudo apt install ubuntu-release-upgrader-core
 
 
 useradd -m steam
