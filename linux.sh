@@ -174,14 +174,14 @@ SAVEGAME_FOLDER_PROPERTY="$(xmlstarlet sel -t -v \
 [ "$SAVEGAME_FOLDER_PROPERTY" = "" ] && ( 
 xmlstarlet ed --inplace -i "/ServerSettings/property[@name='AdminFileName']" -t elem -n newelement -v "" \
 		   -i /ServerSettings/newelement -t attr -n name -v "SaveGameFolder" \
-		   -i /ServerSettings/newelement -t attr -n value -v "./saves" \
+		   -i /ServerSettings/newelement -t attr -n value -v "./Saves" \
            --rename /ServerSettings/newelement \
            --value 'property' \
 		   /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 ) || (
 xmlstarlet --inplace edit \
   --update "//property[@name='SaveGameFolder']/@value" \
-  --value "./saves" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+  --value "./Saves" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 )
 
 # Server Admin File name by default is here
