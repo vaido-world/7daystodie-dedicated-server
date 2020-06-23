@@ -172,14 +172,14 @@ SAVEGAME_FOLDER_PROPERTY="$(xmlstarlet sel -t -v \
 # By default 7 Days To Die Game Save Folder and therefore AdminFile folder is outside the sever launch and configurations folder
 # This script will force to store GameSaves and AdminFile in the 7DaysToDie server folder relatively.
 [ "$SAVEGAME_FOLDER_PROPERTY" = "" ] && ( 
-xmlstarlet ed -i "/ServerSettings/property[@name='AdminFileName']" -t elem -n newelement -v "" \
+xmlstarlet ed --inplace -i "/ServerSettings/property[@name='AdminFileName']" -t elem -n newelement -v "" \
 		   -i /ServerSettings/newelement -t attr -n name -v "SaveGameFolder" \
 		   -i /ServerSettings/newelement -t attr -n value -v "./saves" \
            --rename /ServerSettings/newelement \
            --value 'property' \
 		   /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 ) || (
-xmlstarlet edit \
+xmlstarlet --inplace edit \
   --update "//property[@name='SaveGameFolder']/@value" \
   --value "./saves" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 )
