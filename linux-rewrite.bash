@@ -7,8 +7,8 @@
 
 
 # Example of allowing folder owned by root to be accessible and writable by the user/group "steam"
-# chgrp "steam" /home/steam/.steam/steamcmd/7dtd/Saves
-# chmod g+rwx  /home/steam/.steam/steamcmd/7dtd/Saves
+# sudo chgrp -R "steam" /home/steam/.steam/steamcmd/7dtd/Saves
+# sudo chmod -R g+rwx  /home/steam/.steam/steamcmd/7dtd/Saves
 
 
 # Configure the Ubuntu Upgrade (debconf defaults for console-setup)
