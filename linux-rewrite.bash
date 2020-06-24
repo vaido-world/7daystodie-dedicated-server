@@ -198,5 +198,10 @@ curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/m
 unzip lootable-zombies.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
 rm lootable-zombies.zip
 
+# Add Starting Items Plus modlet by Nanashi
+curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/modlets/StartingItemPlus.zip --remote-name
+unzip StartingItemPlus.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
+rm StartingItemPlus.zip
+
 # Start the 7 Days To Die Dedicated Server
 screen /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
