@@ -208,7 +208,10 @@ curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/m
 unzip STSkipTheStarterQuest-1.0.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
 rm STSkipTheStarterQuest-1.0.zip
 
-
+# Add More Zombies per Biome (x2 x4 x8 x16) A18 modlet by jrbarrio
+curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/modlets/JRB_TZ_MoreZombies_x2.zip --remote-name
+unzip JRB_TZ_MoreZombies_x2.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
+rm JRB_TZ_MoreZombies_x2.zip
 
 # Start the 7 Days To Die Dedicated Server
 screen /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
