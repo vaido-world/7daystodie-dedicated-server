@@ -178,7 +178,7 @@ xmlstarlet ed --inplace -s /adminTools/admins -t elem -n admin -v "" -i /adminTo
 mkdir /home/steam/.steam/steamcmd/7dtd/mods
 
 # Add SMX Modlet for in-game Esc Menu
-curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/modlets/SMXmenu.zip --remote-name --output my.file
+curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/modlets/SMXmenu.zip --remote-name
 tar xvfz SMXmenu.zip --directory=/home/steam/.steam/steamcmd/7dtd/mods/SMXmenu
 
 
