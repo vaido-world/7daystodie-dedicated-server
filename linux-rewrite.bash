@@ -19,8 +19,8 @@
 apt-get update && apt-get upgrade -y
 
 
-useradd -m steam
-passwd steam
-chsh steam --shell "/bin/bash"
-usermod --append --groups sudo steam
+useradd -m "steam"
+passwd "steam"
+chsh "steam" --shell "/bin/bash"
+usermod --append --groups "sudo" "steam"
 
