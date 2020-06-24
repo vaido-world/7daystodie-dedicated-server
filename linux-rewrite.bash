@@ -177,7 +177,7 @@ xmlstarlet --inplace edit \
 
 
 # Add Administrators to the 7 Days To Die server by modifying serveradmin.xml file
-xmlstarlet ed --inplace -s /adminTools/admins -t elem -n admin -v "" -i /adminTools/admins/admin -t attr -n steamID -v 76561198072601792 -i /adminTools/admins/admin -t attr -n permission_level -v 0 /home/steam/.local/share/7DaysToDie/Saves/serveradmin.xml
+xmlstarlet ed --inplace -s /adminTools/admins -t elem -n admin -v "" -i /adminTools/admins/admin -t attr -n steamID -v 76561198072601792 -i /adminTools/admins/admin -t attr -n permission_level -v 0 /home/steam/.steam/steamcmd/7dtd/Saves/serveradmin.xml
 
 # Add Empty Mods folder for the 7 Days To Die Dedicated Server, if it does not exist
 mkdir /home/steam/.steam/steamcmd/7dtd/mods
