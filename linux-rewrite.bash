@@ -1,4 +1,10 @@
 #!/bin/bash
+# Upgrade Ubuntu 18.04 to 18.04.4
+# Installing 7 Days To Die Server
+# Configure the 7 Days To Die Server 
+#   Changes values in serverconfig.xml
+#   Changes values in serveradmins.xml
+
 
 
 # Configure the Upgrade
