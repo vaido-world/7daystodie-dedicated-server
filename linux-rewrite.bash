@@ -203,5 +203,12 @@ curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/m
 unzip StartingItemPlus.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
 rm StartingItemPlus.zip
 
+# Add Starting Items Plus modlet by Nanashi
+curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/modlets/STSkipTheStarterQuest-1.0.zip --remote-name
+unzip STSkipTheStarterQuest-1.0.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
+rm STSkipTheStarterQuest-1.0.zip
+
+
+
 # Start the 7 Days To Die Dedicated Server
 screen /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
