@@ -29,7 +29,14 @@ su "steam"
 sudo apt-get install software-properties-common
 
 
+# Pre seed https://askubuntu.com/questions/506909/how-can-i-accept-the-lience-agreement-for-steam-prior-to-apt-get-install/1017487#1017487
+echo steam steam/question select "I AGREE" | sudo debconf-set-selections
+echo steam steam/license note '' | sudo debconf-set-selections
+
+# Install SteamCmd
 sudo add-apt-repository multiverse
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install lib32gcc1 steamcmd 
+
+
