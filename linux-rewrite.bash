@@ -24,7 +24,7 @@
 # Start the upgrade
 apt-get update && apt-get upgrade -y
 
-
+# Create a new Linux User by the name "steam"
 useradd -m "steam"
 passwd "steam"
 chsh "steam" --shell "/bin/bash"
