@@ -177,5 +177,10 @@ xmlstarlet ed --inplace -s /adminTools/admins -t elem -n admin -v "" -i /adminTo
 # Add Empty Mods folder for the 7 Days To Die Dedicated Server, if it does not exist
 mkdir /home/steam/.steam/steamcmd/7dtd/mods
 
+# Add SMX Modlet for in-game Esc Menu
+curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/modlets/SMXmenu.zip --remote-name --output my.file
+tar xvfz SMXmenu.zip --directory=/home/steam/.steam/steamcmd/7dtd/mods/SMXmenu
+
+
 # Start the 7 Days To Die Dedicated Server
 screen /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
