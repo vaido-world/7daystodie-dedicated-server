@@ -175,6 +175,7 @@ sudo cp -r /root/.local/share/7DaysToDie/Saves/ /home/steam/.steam/steamcmd/7dtd
 groups
 ls -ld ./Saves
 chgrp steam ./Saves
+chmod g+rwx  ./Saves
 
 
 # Change Default Game Save Folder for the Server (Also Changes)
