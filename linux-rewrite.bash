@@ -149,3 +149,23 @@ sudo apt-get install -y xmlstarlet
 
 # Also needs XML Password import from other file and make git ignore that file since it will hold the password for the control panel
 #? Maybe use server modlet to change this setting
+
+
+# Change Default Game Save Folder for the Server (Admin file is inside Game Save Folder, so it also changes its path altogether)
+SAVEGAME_FOLDER_PROPERTY="$(xmlstarlet sel -t -v \
+'//property[@name="SaveGameFolder"]/@name' -n /home/steam/.steam/steamcmd/7dtd/serverconfig.xml)"
+# Finds AdminFileName Property in the serverconfig.xml file and inserts SaveGameFolder that is relative to the Server Folder
+# By default 7 Days To Die Game Save Folder and therefore AdminFile folder is outside the sever launch and configurations folder
+# This script will force to store GameSaves and AdminFile in the 7DaysToDie server folder relatively.
+[ "$SAVEGAME_FOLDER_PROPERTY" = "" ] && ( 
+xmlstarlet ed --inplace -i "/ServerSettings/property[@name='AdminFileName']" -t elem -n newelement -v "" \
+		   -i /ServerSettings/newelement -t attr -n name -v "SaveGameFolder" \
+		   -i /ServerSettings/newelement -t attr -n value -v "./Saves" \
+           --rename /ServerSettings/newelement \
+           --value 'property' \
+		   /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+) || (
+xmlstarlet --inplace edit \
+  --update "//property[@name='SaveGameFolder']/@value" \
+  --value "./Saves" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+)
