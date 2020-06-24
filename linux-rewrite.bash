@@ -1,7 +1,4 @@
 #!/bin/bash
-sudo apt update 
-sudo apt upgrade -y -qq
-
 
 # https://superuser.com/questions/1332341/console-setup-causes-apt-get-update-to-hang/1332926#1332926
 # https://people.debian.org/~plessy/DebianInstallerDebconfTemplates.html
