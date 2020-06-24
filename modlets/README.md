@@ -21,3 +21,6 @@ https://7daystodiemods.com/starting-item-plus/
 
 # Skip the Starter Quest (A18)
 https://www.nexusmods.com/7daystodie/mods/512
+
+# More Zombies per Biome (x2 x4 x8 x16) A18
+https://www.nexusmods.com/7daystodie/mods/225?tab=files
