@@ -188,12 +188,12 @@ unzip SMXmenu.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
 rm SMXmenu.zip
 
 
-# Add SMX Modlet for in-game Esc Menu
+# Add Zombie Loot Drop Increase by jrbarrio
 curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/modlets/JRB_ZombieLootDrop_25.zip --remote-name
 unzip JRB_ZombieLootDrop_25.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
 rm JRB_ZombieLootDrop_25.zip
 
-# Add Lootable Zombies modlet by jrbarrio
+# Add Lootable Zombies modlet by Will
 curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/modlets/lootable-zombies.zip --remote-name
 unzip lootable-zombies.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
 rm lootable-zombies.zip
