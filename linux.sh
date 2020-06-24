@@ -131,6 +131,10 @@ xmlstarlet edit --inplace \
   --update "//property[@name='AirDropMarker']/@value" \
   --value "true" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
   
+# Change the Initial Incorrect 7 Days To Die Dedicated Server PlayerKillingMode
+xmlstarlet edit --inplace \
+  --update "//property[@name='PlayerKillingMode']/@value" \
+  --value "2" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml  
 
   
 # Enable Random World Generator for the Server
