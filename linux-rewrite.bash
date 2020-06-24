@@ -151,7 +151,7 @@ sudo apt-get install -y xmlstarlet
 #? Maybe use server modlet to change this setting
 
 
-# Change Default Game Save Folder for the Server (Admin file is inside Game Save Folder, so it also changes its path altogether)
+# Change Default Game Save Folder for the Server (serveradmin.xml file is inside Game Save Folder, so it also changes its path altogether)
 SAVEGAME_FOLDER_PROPERTY="$(xmlstarlet sel -t -v \
 '//property[@name="SaveGameFolder"]/@name' -n /home/steam/.steam/steamcmd/7dtd/serverconfig.xml)"
 # Finds AdminFileName Property in the serverconfig.xml file and inserts SaveGameFolder that is relative to the Server Folder
@@ -169,3 +169,8 @@ xmlstarlet --inplace edit \
   --update "//property[@name='SaveGameFolder']/@value" \
   --value "./Saves" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 )
+
+
+# Add Administrators to the 7 Days To Die server by modifying serveradmin.xml file
+xmlstarlet ed --inplace -s /adminTools/admins -t elem -n admin -v "" -i /adminTools/admins/admin -t attr -n steamID -v 76561198072601792 -i /adminTools/admins/admin -t attr -n permission_level -v 0 /home/steam/.local/share/7DaysToDie/Saves/serveradmin.xml
+
