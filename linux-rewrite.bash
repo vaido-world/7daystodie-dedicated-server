@@ -136,10 +136,12 @@ sudo apt-get install -y xmlstarlet
   xmlstarlet edit --inplace \
     --update "//property[@name='WorldGenSize']/@value" \
     --value "2048" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+    
   # Set the Map Name for the Random World Generator
   xmlstarlet edit --inplace \
     --update "//property[@name='GameName']/@value" \
     --value "VaidoWorld" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+    
   # Enable Control Panel for Direct Control of the GameServer
   xmlstarlet edit --inplace \
     --update "//property[@name='ControlPanelEnabled']/@value" \
