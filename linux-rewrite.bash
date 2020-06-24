@@ -147,3 +147,5 @@ sudo apt-get install -y xmlstarlet
     --update "//property[@name='ControlPanelEnabled']/@value" \
     --value "true" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 
+# Also needs XML Password import from other file and make git ignore that file since it will hold the password for the control panel
+#? Maybe use server modlet to change this setting
