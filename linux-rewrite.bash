@@ -48,7 +48,7 @@ sudo apt install lib32gcc1 steamcmd
 # Use SteamCmd to Download Dedicated Server Files for 7 Days To Die 
 steamcmd +login anonymous +force_install_dir ./7dtd +app_update 294420 +quit
 
-# Install XML documents parser
+# Install XML document parser for parsing and changing 7 Days To Die serverconfig.xml and other files
 sudo apt-get install -y xmlstarlet
 
 # Configure 7 Days to Die Server 
