@@ -15,3 +15,6 @@ Similar mod: https://7daystodiemods.com/longer-loot-bags/
 
 # Loot-able Zombies (A18)
 https://www.nexusmods.com/7daystodie/mods/511?tab=files&file_id=2297
+
+# Starting Items Plus modlet by Nanashi
+https://7daystodiemods.com/starting-item-plus/
