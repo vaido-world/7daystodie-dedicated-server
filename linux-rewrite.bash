@@ -23,4 +23,13 @@ useradd -m "steam"
 passwd "steam"
 chsh "steam" --shell "/bin/bash"
 usermod --append --groups "sudo" "steam"
+su "steam"
 
+# Fix add-apt-repository: command not found error
+sudo apt-get install software-properties-common
+
+
+sudo add-apt-repository multiverse
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install lib32gcc1 steamcmd 
