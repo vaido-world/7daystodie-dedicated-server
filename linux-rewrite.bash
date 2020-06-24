@@ -203,7 +203,7 @@ curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/m
 unzip StartingItemPlus.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
 rm StartingItemPlus.zip
 
-# Add Starting Items Plus modlet by Nanashi
+# Add Skip the Starter Quest (A18) modlet by Starslayer71002
 curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/modlets/STSkipTheStarterQuest-1.0.zip --remote-name
 unzip STSkipTheStarterQuest-1.0.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
 rm STSkipTheStarterQuest-1.0.zip
