@@ -179,6 +179,10 @@ xmlstarlet --inplace edit \
 # Add Administrators to the 7 Days To Die server by modifying serveradmin.xml file
 xmlstarlet ed --inplace -s /adminTools/admins -t elem -n admin -v "" -i /adminTools/admins/admin -t attr -n steamID -v 76561198072601792 -i /adminTools/admins/admin -t attr -n permission_level -v 0 /home/steam/.steam/steamcmd/7dtd/Saves/serveradmin.xml
 
+# Add CronJob to make backups of the map and make them public in the Apache server
+# /etc/cron.d
+#00 06 * * * root zip -r /var/www/html/7dtd_map_autobackup_cronjob/7dtd_map_$(date "+%Y-%m-%d_%H-%M_UTC").zip /home/steam/.steam/steamcmd/7dtd/Saves/
+
 # Add Empty Mods folder for the 7 Days To Die Dedicated Server, if it does not exist
 mkdir /home/steam/.steam/steamcmd/7dtd/Mods
 
