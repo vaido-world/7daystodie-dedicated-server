@@ -217,5 +217,27 @@ curl https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/m
 unzip JRB_TZ_MoreZombies_x2.zip -d /home/steam/.steam/steamcmd/7dtd/Mods/
 rm JRB_TZ_MoreZombies_x2.zip
 
+
+
+# Can be used to test if crontab works
+# Look for test11.txt file creation and updates every 5th minute in /home/steam/test11.txt
+# cat <<EOT > /etc/cron.d/new11
+# */5 * * * * root /bin/echo test > /home/steam/test11.txt
+# EOT
+
+# Game Server Backup every 6 hours 
+#  After running this snippet configuration script below: 
+#   No need to restart the cronjob it will automatically monitor the /etc/cron.d/ directory for new entries.
+# The configuration snippet will place 7dtd-map-backups crontab file into /etc/cron.d/ folder
+# Every 6 hours, this 7dtd-map-backups crontab file will execute and archive everything at /home/steam/.steam/steamcmd/7dtd/Saves/ in a zip format
+# And place the archive in the folder /var/www/html/7dtd_map_autobackup_cronjob/
+#  File Name Example of .zip archive: /var/www/html/7dtd_map_autobackup_cronjob/7dtd_map_2020-06-27_17-26_UTC.zip
+
+sudo bash -c '
+cat <<EOT > /etc/cron.d/7dtd-map-backups
+* */6 * * * root /usr/bin/zip -r /var/www/html/7dtd_map_autobackup_cronjob/7dtd_map_$(date "+%Y-%m-%d_%H-%M_UTC").zip /home/steam/.steam/steamcmd/7dtd/Saves/
+EOT'
+
+
 # Start the 7 Days To Die Dedicated Server
 screen /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
