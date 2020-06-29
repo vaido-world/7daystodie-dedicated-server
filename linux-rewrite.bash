@@ -234,9 +234,9 @@ rm JRB_TZ_MoreZombies_x2.zip
 #  File Name Example of .zip archive: /var/www/html/7dtd_map_autobackup_cronjob/7dtd_map_2020-06-27_17-26_UTC.zip
 
 sudo bash -c '
-cat <<EOT > /etc/cron.d/7dtd-map-backups
-* */6 * * * root /usr/bin/zip -r /var/www/html/7dtd_map_autobackup_cronjob/7dtd_map_$(date "+%Y-%m-%d_%H-%M_UTC").zip /home/steam/.steam/steamcmd/7dtd/Saves/
-EOT'
+cat <<"EOF" > /etc/cron.d/7dtd-map-backups
+* */6 * * * root /usr/bin/zip -r /var/www/html/7dtd_map_autobackup_cronjob/7dtd_map_$(date "+\%Y-\%m-\%d_\%H-\%M_UTC").zip /home/steam/.steam/steamcmd/7dtd/Saves/
+EOF'
 
 
 # Start the 7 Days To Die Dedicated Server
