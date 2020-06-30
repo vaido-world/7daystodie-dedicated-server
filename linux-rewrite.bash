@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# WARNING: POSSIBLE DNS SPOOFING DETECTED
+# The RSA host key for 7days.vaido.world has changed
+# ssh-keygen -R 7days.vaido.world
+
+
 # Upgrade Ubuntu 18.04 to 18.04.4
 # Installing 7 Days To Die Server
 # Configure the 7 Days To Die Server 
