@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# ssh root@7days.vaido.world
+
 # WARNING: POSSIBLE DNS SPOOFING DETECTED
 # The RSA host key for 7days.vaido.world has changed
 # ssh-keygen -R 7days.vaido.world
