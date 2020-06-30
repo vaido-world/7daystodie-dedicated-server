@@ -6,6 +6,8 @@
 # The RSA host key for 7days.vaido.world has changed
 # ssh-keygen -R 7days.vaido.world
 
+# The authenticity of host '7days.vaido.world (194.5.157.96)' can't be established.
+# ssh -o StrictHostKeyChecking=no root@7days.vaido.world
 
 # Upgrade Ubuntu 18.04 to 18.04.4
 # Installing 7 Days To Die Server
