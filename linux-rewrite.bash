@@ -34,7 +34,7 @@
 
 # Configure the Ubuntu Upgrade (merging configurations)
 # https://serverfault.com/questions/527789/how-to-automate-changed-config-files-during-apt-get-upgrade-in-ubuntu-12/839563#839563
-  apt-get --yes --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" upgrade
+  apt-get --yes --allow -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" upgrade
 
 # Start the upgrade
 apt-get update && apt-get upgrade -y
