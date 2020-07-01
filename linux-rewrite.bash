@@ -37,7 +37,7 @@
   apt-get --yes --allow-downgrades --allow-remove-essential --allow-change-held-packages -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" upgrade
 
 # Start the upgrade
-apt-get update && apt-get upgrade -y
+# apt-get update && apt-get upgrade -y
 
 # Create a new Linux User by the name "steam"
 useradd -m "steam"
