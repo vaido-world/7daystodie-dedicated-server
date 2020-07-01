@@ -45,7 +45,7 @@ echo "steam:123456789" | chpasswd
 chsh "steam" --shell "/bin/bash"
 usermod --append --groups "sudo" "steam"
 su "steam"
-cd "$home"
+cd "$HOME"
 
 # Fix add-apt-repository: command not found error
 sudo apt-get install software-properties-common
