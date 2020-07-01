@@ -44,11 +44,21 @@ useradd -m "steam"
 echo "steam:123456789" | chpasswd
 chsh "steam" --shell "/bin/bash"
 usermod --append --groups "sudo" "steam"
-su "steam"
-cd "$HOME"
+
+# Run cd command as user Steam
+su - steam <<'EOF'
+	cd "$HOME"
+	
+
+	
+EOF
+
+# Run Sudo command as user Steam
+echo 123456789 | sudo -S -i <<'EOF'
+EOF
 
 # Fix add-apt-repository: command not found error
-sudo apt-get install software-properties-common
+apt-get install software-properties-common -y
 
 
 # Pre seed https://askubuntu.com/questions/506909/how-can-i-accept-the-lience-agreement-for-steam-prior-to-apt-get-install/1017487#1017487
