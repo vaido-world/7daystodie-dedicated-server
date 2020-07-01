@@ -41,7 +41,7 @@
 
 # Create a new Linux User by the name "steam"
 useradd -m "steam"
-passwd "steam"
+echo "steam:123456789" | chpasswd
 chsh "steam" --shell "/bin/bash"
 usermod --append --groups "sudo" "steam"
 su "steam"
