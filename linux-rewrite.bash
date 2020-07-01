@@ -47,15 +47,12 @@ usermod --append --groups "sudo" "steam"
 
 # Run cd command as user Steam
 su - steam <<'EOF'
-	cd "$HOME"
-	
-
-	
+cd "$HOME"
+echo 123456789 | sudo -S echo
+sudo apt install packagehere
 EOF
 
-# Run Sudo command as user Steam
-echo 123456789 | sudo -S -i <<'EOF'
-EOF
+
 
 # Fix add-apt-repository: command not found error
 apt-get install software-properties-common -y
