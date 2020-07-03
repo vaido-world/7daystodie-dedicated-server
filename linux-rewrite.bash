@@ -55,10 +55,11 @@ su - steam <<- 'EOF'
 EOF
 
 # Write to file as other user with heredoc Nesting
-su - steam <<- 'EOF1'
+su - steam <<-'EOF1'
     cd "$HOME"
     echo $(pwd)
-    echo 123456789 | sudo -S echo
+    echo 123456789 | sudo -S echo >/dev/null
+#Commenting
     whoami
     sudo bash -c '
     cat <<"EOF" > /etc/cron.d/7dtd-map-backups
