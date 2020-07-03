@@ -54,6 +54,18 @@ su - steam <<- 'EOF'
     sudo apt install packagehere
 EOF
 
+# Write to file as other user with heredoc Nesting
+su - steam <<- 'EOF1'
+    cd "$HOME"
+    echo $(pwd)
+    echo 123456789 | sudo -S echo
+    whoami
+    sudo bash -c '
+    cat <<"EOF" > /etc/cron.d/7dtd-map-backups
+    0 */6 * * * root /usr/bin/zip -r /var/www/html/7dtd_map_autobackup_cronjob/7dtd_map_$(date "+\%Y-\%m-\%d_\%H-\%M_UTC").zip /home/steam/.steam/steamcmd/7dtd/Saves/
+EOF'
+EOF1
+
 
 
 # Fix add-apt-repository: command not found error
