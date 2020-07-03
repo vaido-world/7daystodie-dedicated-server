@@ -46,10 +46,12 @@ chsh "steam" --shell "/bin/bash"
 usermod --append --groups "sudo" "steam"
 
 # Run cd command as user Steam
-su - steam <<'EOF'
-cd "$HOME"
-echo 123456789 | sudo -S echo
-sudo apt install packagehere
+su - steam <<- 'EOF'
+    cd "$HOME"
+    echo $(pwd)
+    echo 123456789 | sudo -S echo
+    whoami
+    sudo apt install packagehere
 EOF
 
 
