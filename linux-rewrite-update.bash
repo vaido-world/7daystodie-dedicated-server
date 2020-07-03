@@ -42,8 +42,7 @@ su - steam <<- 'EOF'
     echo steam steam/license note '' | sudo debconf-set-selections
 EOF
 
-echo new 1
-read varname
+
 # Install SteamCmd for Linux User "steam"
 # SteamCmd is used to Download Game Server Files For Dedicated Servers and Update Them
 su - steam <<- 'EOF'
@@ -55,14 +54,13 @@ su - steam <<- 'EOF'
     sudo apt install lib32gcc1 steamcmd -y
 EOF
 
-echo new 2
+echo new3
 read varname
 
 # Fix add-apt-repository: command not found error
 apt-get install software-properties-common -y
 
-echo new3
-read varname
+
 
 # Use SteamCmd to Download Dedicated Server Files for 7 Days To Die 
 su - steam <<- 'EOF'
