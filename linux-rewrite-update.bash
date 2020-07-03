@@ -54,9 +54,6 @@ su - steam <<- 'EOF'
     sudo apt install lib32gcc1 steamcmd -y
 EOF
 
-echo new3
-read varname
-
 # Fix add-apt-repository: command not found error
 apt-get install software-properties-common -y
 
