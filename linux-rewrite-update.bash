@@ -69,7 +69,7 @@ read varname
 su - steam <<- 'EOF'
     cd "$HOME"
     echo 123456789 | sudo -S echo > /dev/null
-	steamcmd +login anonymous +force_install_dir ./7dtd +app_update 294420 +quit
+    steamcmd +login anonymous +force_install_dir ./7dtd +app_update 294420 +quit
 EOF
 
 # Use SteamCmd to Download Dedicated Server Files for 7 Days To Die 
