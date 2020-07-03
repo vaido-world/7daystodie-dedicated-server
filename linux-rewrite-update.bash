@@ -43,7 +43,7 @@ su - steam <<- 'EOF'
 EOF
 
 echo new 1
-
+read varname
 # Install SteamCmd for Linux User "steam"
 # SteamCmd is used to Download Game Server Files For Dedicated Servers and Update Them
 su - steam <<- 'EOF'
