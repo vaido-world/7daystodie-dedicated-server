@@ -74,7 +74,7 @@ EOF
 su - steam <<- 'EOF'
     cd "$HOME"
     echo 123456789 | sudo -S echo > /dev/null
-	sudo apt-get install -y xmlstarlet
+    sudo apt-get install -y xmlstarlet
 EOF
 
 
