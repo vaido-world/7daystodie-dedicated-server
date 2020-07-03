@@ -26,6 +26,7 @@
   
 # Configure the Ubuntu Upgrade (merging configurations)
 # https://serverfault.com/questions/527789/how-to-automate-changed-config-files-during-apt-get-upgrade-in-ubuntu-12/839563#839563
+  apt update
   apt-get --yes --allow-downgrades --allow-remove-essential --allow-change-held-packages -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" upgrade
 
 # Create a new Linux User by the name "steam"
@@ -36,6 +37,7 @@ usermod --append --groups "sudo" "steam"
 
 # Agree with SteamCmd [Terms of Use]
 su - steam <<- 'EOF'
+    echo 123456789 | sudo -S echo > /dev/null
     echo steam steam/question select "I AGREE" | sudo debconf-set-selections
     echo steam steam/license note '' | sudo debconf-set-selections
 EOF
