@@ -54,7 +54,6 @@ su - steam <<- 'EOF'
     sudo apt update
     sudo apt install lib32gcc1 steamcmd -y
 EOF
-.
 
 echo new 2
 read varname
