@@ -167,6 +167,13 @@ su - steam <<-'EOF1'
 EOF1
 
 
+su - steam <<-'EOF1'
+    sudo apt-get install expect
+EOF1
+
+
+
+
 # Change Default Game Save Folder for the Server (serveradmin.xml file is inside Game Save Folder, so it also changes its path altogether)
 su - steam <<-'EOF1'
 SAVEGAME_FOLDER_PROPERTY="$(xmlstarlet sel -t -v \
