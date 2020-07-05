@@ -166,11 +166,32 @@ su - steam <<-'EOF1'
     --value "true" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 EOF1
 
+
+# Change Default Game Save Folder for the Server (serveradmin.xml file is inside Game Save Folder, so it also changes its path altogether)
+SAVEGAME_FOLDER_PROPERTY="$(xmlstarlet sel -t -v \
+'//property[@name="SaveGameFolder"]/@name' -n /home/steam/.steam/steamcmd/7dtd/serverconfig.xml)"
+# Finds AdminFileName Property in the serverconfig.xml file and inserts SaveGameFolder that is relative to the Server Folder
+# By default 7 Days To Die Game Save Folder and therefore AdminFile folder is outside the sever launch and configurations folder
+# This script will force to store GameSaves and AdminFile in the 7DaysToDie server folder relatively.
+[ "$SAVEGAME_FOLDER_PROPERTY" = "" ] && ( 
+xmlstarlet ed --inplace -i "/ServerSettings/property[@name='AdminFileName']" -t elem -n newelement -v "" \
+		   -i /ServerSettings/newelement -t attr -n name -v "SaveGameFolder" \
+		   -i /ServerSettings/newelement -t attr -n value -v "./Saves" \
+           --rename /ServerSettings/newelement \
+           --value 'property' \
+		   /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+) || (
+xmlstarlet --inplace edit \
+  --update "//property[@name='SaveGameFolder']/@value" \
+  --value "./Saves" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
+)
+
+
+# Launch server to generate the Map 
 screen -d -m /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
 while ! [[ $(sleep 3 | telnet localhost 8081 2>/dev/null | (grep -i "Connected with 7DTD server.")) ]]
 do
 	echo [Telnet]Trying to connect to the 7 Days To Die server
 done
 echo shutdown >/dev/tcp/localhost/8081
-
 
