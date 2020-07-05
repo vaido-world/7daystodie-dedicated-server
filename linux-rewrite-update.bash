@@ -187,7 +187,7 @@ xmlstarlet --inplace edit \
 )
 
 
-# Launch server to generate the Map 
+# Launch server to generate the 7 Days To Die Game Map and serveradmin.xml
 screen -d -m /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
 while ! [[ $(sleep 3 | telnet localhost 8081 2>/dev/null | (grep -i "Connected with 7DTD server.")) ]]
 do
@@ -197,3 +197,6 @@ echo shutdown >/dev/tcp/localhost/8081
 
 # Add Administrators to the 7 Days To Die server by modifying serveradmin.xml file
 xmlstarlet ed --inplace -s /adminTools/admins -t elem -n admin -v "" -i /adminTools/admins/admin -t attr -n steamID -v 76561198072601792 -i /adminTools/admins/admin -t attr -n permission_level -v 0 /home/steam/.steam/steamcmd/7dtd/Saves/serveradmin.xml
+
+# Launch 7 Days to Die server to Test the Gameplay
+screen -d -m /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
