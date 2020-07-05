@@ -168,6 +168,7 @@ EOF1
 
 
 # Change Default Game Save Folder for the Server (serveradmin.xml file is inside Game Save Folder, so it also changes its path altogether)
+su - steam <<-'EOF1'
 SAVEGAME_FOLDER_PROPERTY="$(xmlstarlet sel -t -v \
 '//property[@name="SaveGameFolder"]/@name' -n /home/steam/.steam/steamcmd/7dtd/serverconfig.xml)"
 # Finds AdminFileName Property in the serverconfig.xml file and inserts SaveGameFolder that is relative to the Server Folder
@@ -187,13 +188,15 @@ xmlstarlet --inplace edit \
 )
 
 
+su - steam <<-'EOF1'
 # Launch server to generate the 7 Days To Die Game Map and serveradmin.xml
-screen -d -m /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
-while ! [[ $(sleep 3 | telnet localhost 8081 2>/dev/null | (grep -i "Connected with 7DTD server.")) ]]
-do
-	echo [Telnet]Trying to connect to the 7 Days To Die server
-done
-echo shutdown >/dev/tcp/localhost/8081
+    screen -d -m /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
+    while ! [[ $(sleep 3 | telnet localhost 8081 2>/dev/null | (grep -i "Connected with 7DTD server.")) ]]
+    do
+        echo [Telnet]Trying to connect to the 7 Days To Die server
+    done
+    echo shutdown >/dev/tcp/localhost/8081
+EOF1
 
 # Add Empty Mods folder for the 7 Days To Die Dedicated Server, if it does not exist
 mkdir /home/steam/.steam/steamcmd/7dtd/Mods
