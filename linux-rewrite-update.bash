@@ -167,11 +167,6 @@ su - steam <<-'EOF1'
 EOF1
 
 
-su - steam <<-'EOF1'
-    sudo apt-get install expect
-EOF1
-
-
 
 
 # Change Default Game Save Folder for the Server (serveradmin.xml file is inside Game Save Folder, so it also changes its path altogether)
@@ -196,13 +191,27 @@ xmlstarlet --inplace edit \
 
 
 su - steam <<-'EOF1'
+    sudo apt-get install expect
+EOF1
+
 # Launch server to generate the 7 Days To Die Game Map and serveradmin.xml
+su - steam <<-'EOF1'
     screen -d -m /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
-    while ! [[ $(sleep 3 | telnet localhost 8081 2>/dev/null | (grep -i "Connected with 7DTD server.")) ]]
-    do
-        echo [Telnet]Trying to connect to the 7 Days To Die server
-    done
-    echo shutdown >/dev/tcp/localhost/8081
+
+# Wait for the 7 Days To Die Game Server to Load Completely
+while ! [ telnetUnableToConnected == 0 ]
+do 
+  sleep "2";
+  /usr/bin/expect <(cat << EOF
+    spawn telnet localhost 8081
+    expect "StartGame done"
+    send "shutdown\r"
+    send "exit\r"
+EOF
+)
+  echo "$?";
+  telnetUnableToConnected="$?";
+done;
 EOF1
 
 # Add Empty Mods folder for the 7 Days To Die Dedicated Server, if it does not exist
