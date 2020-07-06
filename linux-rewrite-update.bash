@@ -188,6 +188,7 @@ xmlstarlet --inplace edit \
   --update "//property[@name='SaveGameFolder']/@value" \
   --value "./Saves" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 )
+EOF1
 
 # Install expect for Telnet automation
 su - steam <<-'EOF1'
