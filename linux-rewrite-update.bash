@@ -194,7 +194,7 @@ EOF1
 su - steam <<-'EOF1'
     cd "$HOME"
     echo 123456789 | sudo -S echo > /dev/null
-    sudo apt-get install expect
+    sudo apt-get install expect -y
 EOF1
 
 # Launch server to generate the 7 Days To Die Game Map and serveradmin.xml
