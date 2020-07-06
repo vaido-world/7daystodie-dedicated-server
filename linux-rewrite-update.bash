@@ -35,6 +35,10 @@ echo "steam:123456789" | chpasswd
 chsh "steam" --shell "/bin/bash"
 usermod --append --groups "sudo" "steam"
 
+
+# Fix add-apt-repository: command not found error
+apt-get install software-properties-common -y
+
 # Agree with SteamCmd [Terms of Use]
 su - steam <<- 'EOF'
     echo 123456789 | sudo -S echo > /dev/null
@@ -53,9 +57,6 @@ su - steam <<- 'EOF'
     sudo apt update
     sudo apt install lib32gcc1 steamcmd -y
 EOF
-
-# Fix add-apt-repository: command not found error
-apt-get install software-properties-common -y
 
 
 # Use SteamCmd to Download Dedicated Server Files for 7 Days To Die 
