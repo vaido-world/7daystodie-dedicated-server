@@ -189,7 +189,7 @@ xmlstarlet --inplace edit \
   --value "./Saves" /home/steam/.steam/steamcmd/7dtd/serverconfig.xml
 )
 
-
+# Install expect for Telnet automation
 su - steam <<-'EOF1'
     sudo apt-get install expect
 EOF1
@@ -197,7 +197,6 @@ EOF1
 # Launch server to generate the 7 Days To Die Game Map and serveradmin.xml
 su - steam <<-'EOF1'
     screen -d -m /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
-
 # Wait for the 7 Days To Die Game Server to Load Completely
 while ! [ telnetUnableToConnected == 0 ]
 do 
