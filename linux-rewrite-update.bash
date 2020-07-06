@@ -204,7 +204,7 @@ su - steam <<-'EOF1'
 while ! [ telnetUnableToConnected == 0 ]
 do 
   sleep "2";
-  /usr/bin/expect <(cat << EOF
+/usr/bin/expect <(cat <<- 'EOF'
     spawn telnet localhost 8081
     expect "StartGame done"
     send "shutdown\r"
