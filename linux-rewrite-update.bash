@@ -71,7 +71,6 @@ su - steam <<- 'EOF'
     cd "$HOME"
     echo 123456789 | sudo -S echo > /dev/null
 EOF
-read varname
 
 # Install XML document parser for parsing and changing 7 Days To Die serverconfig.xml and other .xml files
 su - steam <<- 'EOF'
