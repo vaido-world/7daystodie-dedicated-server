@@ -81,7 +81,7 @@ echo steam steam/license note '' | sudo debconf-set-selections
 sudo add-apt-repository multiverse
 sudo dpkg --add-architecture i386
 sudo apt update
-sudo apt install lib32gcc1 steamcmd 
+sudo apt install lib32gcc1 steamcmd -y
 
 # Use SteamCmd to Download Dedicated Server Files for 7 Days To Die 
 steamcmd +login anonymous +force_install_dir ./7dtd +app_update 294420 +quit
