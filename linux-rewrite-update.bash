@@ -192,6 +192,8 @@ EOF1
 
 # Install expect for Telnet automation
 su - steam <<-'EOF1'
+    cd "$HOME"
+    echo 123456789 | sudo -S echo > /dev/null
     sudo apt-get install expect
 EOF1
 
