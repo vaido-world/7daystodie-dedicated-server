@@ -201,20 +201,26 @@ EOF1
 su - steam <<-'EOF1'
     screen -d -m /home/steam/.steam/steamcmd/7dtd/startserver.sh -configfile=serverconfig.xml
 # Wait for the 7 Days To Die Game Server to Load Completely
-while ! [ telnetUnableToConnected == 0 ]
+telnetUnableToConnected=1
+while ! [ $telnetUnableToConnected == "0" ]
 do 
   sleep "2";
-/usr/bin/expect <(cat <<- 'EOF'
+  /usr/bin/expect <(cat << EOF
     spawn telnet localhost 8081
     expect "StartGame done"
     send "shutdown\r"
     send "exit\r"
 EOF
 )
-  echo "$?";
-  telnetUnableToConnected="$?";
-done;
+telnetUnableToConnected=$?
+echo "$telnetUnableToConnected";
+if [ $telnetUnableToConnected == "0" ]
+then
+break;
+fi
+done
 EOF1
+
 
 # Add Empty Mods folder for the 7 Days To Die Dedicated Server, if it does not exist
 mkdir /home/steam/.steam/steamcmd/7dtd/Mods
