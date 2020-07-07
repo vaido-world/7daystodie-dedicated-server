@@ -206,6 +206,7 @@ while ! [ $telnetUnableToConnected == "0" ]
 do 
   sleep "2";
   /usr/bin/expect <(cat << EOF
+    set timeout 10
     spawn telnet localhost 8081
     expect "StartGame"
     send "shutdown\r"
