@@ -222,6 +222,10 @@ done
 EOF1
 
 
+echo stop there, why are you exiting
+read stop
+
+
 # Add Empty Mods folder for the 7 Days To Die Dedicated Server, if it does not exist
 mkdir /home/steam/.steam/steamcmd/7dtd/Mods
 
