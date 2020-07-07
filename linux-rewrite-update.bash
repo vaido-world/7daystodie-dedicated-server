@@ -207,7 +207,7 @@ do
   sleep "2";
   /usr/bin/expect <(cat << EOF
     spawn telnet localhost 8081
-    expect "StartGame done"
+    expect "StartGame"
     send "shutdown\r"
     send "exit\r"
 EOF
