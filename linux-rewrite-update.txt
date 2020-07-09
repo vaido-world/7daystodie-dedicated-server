@@ -1,0 +1,21 @@
+Main issues:
+
+Unable to find a way to Restart the Game Server after the Map is generated and Admin Files are created.
+While writing a script to setup a fresh 7 Days To Die Game Server for the first time.
+  I Could not find a reliable way to parse the output of telnet and issue the shutdown command: 
+    The first time you start the server, the map is being generated and admin file is created in the map folder.
+    After generating Admin file, I always wanted to automatically add the Administrators of the server.
+    However after automatically adding the administrators, the Game Server needs restart. 
+    And the only way to restart Game Server that I know of: connect to the server via telnet and issue
+      the shutdown command, then rerun the GameServer to load Admin Files. As mentioned I was unsucessful.
+      I tried linux package "Expect", but I never managed to actually make it work properly.
+    So, Manually Restarting the Game Server is needed, if you want for the scripts to work on the generated files such as Admins File.
+  
+
+About:
+This script will Setup Environment for a New 7 Days To Die Dedicated Server
+It will create a new Linux User named "steam"
+It will install steamcmd into /home/steam/.steam/steamcmd 
+It will download 7 Days To Die Game Server Files to (/home/steam/.steam/steamcmd/7dtd) folder
+It will change configurations of serverconfig.xml file (/home/steam/.steam/steamcmd/7dtd/serverconfig.xml)
+It will not start the server automatically to generate Map or Admin File. (See Main Issue above)
