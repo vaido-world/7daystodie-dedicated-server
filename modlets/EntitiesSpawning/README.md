@@ -18,3 +18,4 @@ The spawning of the entities on the server is controlled in:
 You will need to go change that for every biome you want to increase the animal spawns in. This one above will just effect the "Forrest" biome  
 
  
+### Refrence: https://community.7daystodie.com/topic/4157-animal-spawn-rate-and-amount-change/?tab=comments#comment-60925
