@@ -1,0 +1,36 @@
+<configs>
+
+<!-- 	// In-game Menu -->
+
+		<remove xpath="/windows/window[@name='ingameMenu']" />
+
+		<append xpath="/windows">
+			<window name="ingameMenu" size="200,400" anchor="LeftTop" pos="20, 0" controller="InGameMenuWindow" cursor_area="true">
+<!--	
+			<panel name="content" pos="0,0" height="200" depth="1" pivot="center" disableautobackground="true" >
+				<sprite depth="2" name="border" sprite="menu_empty3px" pos="0,0" height="200" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9" />
+				<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" pos="2,-2" height="196" width="246" color="[darkGrey]" type="sliced" fillcenter="true" globalopacity="true" globalopacitymod="0.65" />
+ -->	
+				<!--<grid name="buttons" pos="500, -70" cols="1" width="280" cell_width="280" cell_height="18" arrangement="vertical" repeat_content="false" >
+					<label name="InformationAboutServer" depth="3" text="[FFFFFF]You can download✓ the Server Game Map " font_size="18" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
+					<label name="InformationAboutServer" depth="3" text="[FFFFFF]You can contribute Mods to the Server " font_size="18" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
+				</grid> -->
+				<grid name="buttons" pos="300, -30" cols="1" width="250" cell_width="250" cell_height="56" arrangement="vertical" repeat_content="false" >
+					<label name="InformationAboutServer" depth="3" text="&#10; [FFFFFF][Server Information] " font_size="18" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
+					<label name="InformationAboutServer" depth="3" text="[03F1F5]PVPE Open Free Community server [1000XP][300%Loot] &#10; Server IP: 7days.vaido.world" font_size="18" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
+					<label name="InformationAboutServer" depth="3" text="Server Website: http://7days.vaido.world" font_size="18" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
+				</grid>
+				<grid name="buttons" pos="20, -20" cols="1" width="270" cell_width="270" cell_height="56" arrangement="vertical" repeat_content="false" >
+					<simplebutton name="btnInvite" depth="3" width="250" height="46" caption_key="xuiMenuInvite" font_size="40" />
+					<simplebutton name="btnOptions" depth="3" width="250" height="46" caption_key="xuiMenuOptions" font_size="40" />
+					<simplebutton name="btnHelp" depth="3" width="250" height="46" caption_key="xuiMenuHelp" font_size="40" />
+					<simplebutton name="btnSave" depth="3" width="250" height="46" caption_key="xuiMenuSave" font_size="40" />
+					<simplebutton name="btnExit" depth="3" width="250" height="46" caption_key="xuiMenuExit" font_size="40" />
+					<simplebutton name="btnExportPrefab" depth="3" width="250" height="46" caption_key="xuiMenuExportPrefab" font_size="40" />
+					<label name="InformationAboutServer" depth="3" text="[FFFFFF]✓ You can download the Server Map &#10; [FFFFFF]✓ You can view Server Configurations &#10; [FFFFFF]✓ You can contribute Mods to the Server " font_size="18" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
+				</grid>
+			<!-- </panel> -->
+			</window>
+		</append>
+
+</configs>
