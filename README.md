@@ -36,8 +36,8 @@ To join a session with root user
 To kill the session as steam user
 ` screen -XS 7DaysToDie_GameServer quit`
 
-To kill the session as root user
-`screen -xS "steam/7DaysToDie_GameServer" quit`
+<s>To kill the session as root user
+`screen -xS "steam/7DaysToDie_GameServer" quit`</s>
 
 ` screen -XS [session # you want to quit] quit`
   1277.7DaysToDie_GameServer
