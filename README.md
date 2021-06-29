@@ -18,6 +18,8 @@ linux.sh and linux-rewrite.bash, I think you need to switch to the `steam` user 
 Minimal setup
 `bash ./ubuntu-install-steamcmd-7dtd.bash`
 
+use `top` command to check process and see RAM usage of the server instances 
+
 
 ## Old Notes
 
