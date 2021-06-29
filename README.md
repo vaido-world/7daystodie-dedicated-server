@@ -27,6 +27,12 @@ When as root user, use `su steam` and type `screen -r` to get into the server sc
 
 When as steam user type `exit` to return to root user.
 
+To list all the sessions while being not steam user, but as a root
+`ls -laR /var/run/screen/`
+
+To kill the session
+` screen -XS [session # you want to quit] quit`
+  1277.7DaysToDie_GameServer
 
 ## Old Notes
 
