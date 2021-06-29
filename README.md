@@ -5,8 +5,8 @@ apt-upgrade
 curl -L https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/linux-rewrite.bash | bash
 ```
 
-Subdomain suggestions: 7dtd or 7days 
-Control Panel: http://7dtd.vaido.world:8080/
+Subdomain suggestions: 7dtd or 7days   
+Control Panel: http://7dtd.vaido.world:8080/  
 
 
 ## New notes
