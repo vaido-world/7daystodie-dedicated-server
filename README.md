@@ -20,6 +20,7 @@ Minimal setup
 
 use `top` command to check process and see RAM usage of the server instances 
 
+When as root user, use `su steam` and type `screen -r` to get into the server screen session.
 
 ## Old Notes
 
