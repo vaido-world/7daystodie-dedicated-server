@@ -1,4 +1,6 @@
 # 7daystodie-dedicated-server
+## Usage 
+`curl -L https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/linux-rewrite.bash | bash`
 
 ```
 While 7 Days To Die Dedicated Server working:
