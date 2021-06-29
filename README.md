@@ -34,6 +34,7 @@ To list all the sessions while being not steam user, but as a root
 
 To join a session with root user
 ` screen -r steam/7DaysToDie_GameServer`
+` screen -r steam`
 
 To kill the session as steam user
 ` screen -XS 7DaysToDie_GameServer quit`
