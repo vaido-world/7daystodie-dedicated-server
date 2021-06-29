@@ -25,6 +25,9 @@ use `top` command to check process and see RAM usage of the server instances
 
 When as root user, use `su steam` and type `screen -r` to get into the server screen session.
 
+When as steam user type `exit` to return to root user.
+
+
 ## Old Notes
 
 While 7 Days To Die Dedicated Server working:
