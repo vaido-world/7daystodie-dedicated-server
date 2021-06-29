@@ -15,7 +15,10 @@ linux.sh and linux-rewrite.bash - might be earlier versions.
 linux.sh and linux-rewrite.bash, I think you need to switch to the `steam` user and only then execute the script.
 
 
-Minimal setup
+
+### Minimal setup
+Extract into the root home directory
+and launch it without su steam:
 `bash ./ubuntu-install-steamcmd-7dtd.bash`
 
 use `top` command to check process and see RAM usage of the server instances 
