@@ -1,6 +1,9 @@
 # 7daystodie-dedicated-server
 ## Usage 
-`curl -L https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/linux-rewrite.bash | bash`
+```
+apt-upgrade
+curl -L https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/linux-rewrite.bash | bash
+```
 
 ```
 
