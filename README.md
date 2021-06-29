@@ -40,6 +40,7 @@ To kill the session as steam user
 
 <s>To kill the session as root user
 `screen -XS "steam/7DaysToDie_GameServer" quit`</s>
+> Note that this command doesn't work if the session is password protected.
 
 
 ## Old Notes
