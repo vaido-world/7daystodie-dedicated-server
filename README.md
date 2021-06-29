@@ -8,6 +8,9 @@ curl -L https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/li
 
 
 ## New notes
+A link to the server can be introduced like this:   
+steam://connect/http://7dtd.vaido.world:26900/  
+steam://connect/193.111.199.207:4868   
 
 Minimal_setup.zip - seem to have the most development
 linux.sh and linux-rewrite.bash - might be earlier versions.
