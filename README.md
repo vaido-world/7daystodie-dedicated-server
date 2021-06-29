@@ -9,8 +9,12 @@ curl -L https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/li
 
 ## New notes
 A link to the server can be introduced like this:   
+While the game is running these can be used to connect to the server:
 steam://connect/http://7dtd.vaido.world:26900/  
 steam://connect/193.111.199.207:4868   
+While the game is not running this way is possible as well
+steam://run/251570/connect/7dtd.vaido.world:26900
+
 
 Minimal_setup.zip - seem to have the most development
 linux.sh and linux-rewrite.bash - might be earlier versions.
