@@ -32,12 +32,14 @@
   debconf-set-selections encoding.conf
   rm encoding.conf
 
+# Uncommented
 # Configure the Ubuntu Upgrade (merging configurations)
 # https://serverfault.com/questions/527789/how-to-automate-changed-config-files-during-apt-get-upgrade-in-ubuntu-12/839563#839563
-  apt-get --yes --allow-downgrades --allow-remove-essential --allow-change-held-packages -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" upgrade
+apt-get --yes --allow-downgrades --allow-remove-essential --allow-change-held-packages -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew" upgrade
 
+# Uncommented
 # Start the upgrade
-# apt-get update && apt-get upgrade -y
+apt-get update && apt-get upgrade -y
 
 # Create a new Linux User by the name "steam"
 useradd -m "steam"
