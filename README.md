@@ -14,6 +14,11 @@ linux.sh and linux-rewrite.bash - might be earlier versions.
 
 linux.sh and linux-rewrite.bash, I think you need to switch to the `steam` user and only then execute the script.
 
+
+Minimal setup
+`bash ./ubuntu-install-steamcmd-7dtd.bash`
+
+
 ## Old Notes
 
 While 7 Days To Die Dedicated Server working:
