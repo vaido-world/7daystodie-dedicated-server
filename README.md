@@ -5,6 +5,7 @@ apt-upgrade
 curl -L https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/linux-rewrite.bash | bash
 ```
 
+Control Panel: http://7dtd.vaido.world:8080/
 
 
 ## New notes
