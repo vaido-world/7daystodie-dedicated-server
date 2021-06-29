@@ -15,6 +15,8 @@ linux.sh and linux-rewrite.bash - might be earlier versions.
 linux.sh and linux-rewrite.bash, I think you need to switch to the `steam` user and only then execute the script.
 
 
+### Tools
+Kitty (putty fork) and Cyberduck might be useful, remember to use sftp instead of ftp on Cyberduck. 
 
 ### Minimal setup
 Extract into the root home directory
