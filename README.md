@@ -5,14 +5,17 @@ apt-upgrade
 curl -L https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/linux-rewrite.bash | bash
 ```
 
-```
+
 
 ## New notes
+
 Minimal_setup.zip - seem to have the most development
 linux.sh and linux-rewrite.bash - might be earlier versions.
 
+linux.sh and linux-rewrite.bash, I think you need to switch to the `steam` user and only then execute the script.
 
 ## Old Notes
+
 While 7 Days To Die Dedicated Server working:
 After activating DMZ Zone on the internal network IP address and connecting to the external IP
 Connection to server failed
