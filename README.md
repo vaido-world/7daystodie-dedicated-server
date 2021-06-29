@@ -3,6 +3,8 @@
 `curl -L https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/linux-rewrite.bash | bash`
 
 ```
+
+## Old Notes
 While 7 Days To Die Dedicated Server working:
 After activating DMZ Zone on the internal network IP address and connecting to the external IP
 Connection to server failed
