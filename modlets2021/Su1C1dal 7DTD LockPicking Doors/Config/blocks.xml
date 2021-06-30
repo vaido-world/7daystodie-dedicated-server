@@ -1,0 +1,1288 @@
+<configs>
+
+
+<remove xpath="/blocks/block[@name='secureDoorWooden']" />
+<remove xpath="/blocks/block[@name='secureReinforcedDoorWooden']" />
+<remove xpath="/blocks/block[@name='metalReinforcedDoorWooden']" />
+<remove xpath="/blocks/block[@name='ironDoor1_v1']" />
+<remove xpath="/blocks/block[@name='ironDoor1_v2']" />
+<remove xpath="/blocks/block[@name='ironDoor1_v3']" />
+<remove xpath="/blocks/block[@name='commercialDoor1_v1']" />
+<remove xpath="/blocks/block[@name='commercialDoor1_v2']" />
+<remove xpath="/blocks/block[@name='commercialDoor1_v3']" />
+<remove xpath="/blocks/block[@name='commercialDoor2_v1']" />
+<remove xpath="/blocks/block[@name='commercialDoor2_v2']" />
+<remove xpath="/blocks/block[@name='commercialDoor2_v3']" />
+<remove xpath="/blocks/block[@name='commercialDoor4_v1']" />
+<remove xpath="/blocks/block[@name='commercialDoor4_v2']" />
+<remove xpath="/blocks/block[@name='commercialDoor4_v3']" />
+<remove xpath="/blocks/block[@name='houseFrontDoor1_v1']" />
+<remove xpath="/blocks/block[@name='houseFrontDoor1_v2']" />
+<remove xpath="/blocks/block[@name='houseFrontDoor1_v3']" />
+<remove xpath="/blocks/block[@name='houseFrontDoor2_v1']" />
+<remove xpath="/blocks/block[@name='houseFrontDoor2_v2']" />
+<remove xpath="/blocks/block[@name='houseFrontDoor2_v3']" />
+
+
+
+
+<append xpath="/blocks">
+
+<!-- VANILLA DOORS RENAMED WITH PROPER UPGRADE/DOWNGRADE PATH, ADDED BACK IN-->
+<!-- HIJACKED VANILLA NAMES FOR USE IN PREFABS WITHOUT MODIFICATION -->
+
+
+<block name="secureDoorWooden">
+	<property name="Class" value="DoorSecure"/>
+	<property name="Material" value="Mwood_regular"/><property name="MaxDamage" value="250"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="FuelValue" value="200"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/wooden_door_v1Prefab"/> <property name="ModelOffset" value="0,0,0"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="35"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_wood"/>
+	<property name="CloseSound" value="close_door_wood"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="secureReinforcedDoorWooden1"/>
+		<property name="Item" value="resourceWood"/>
+		<property name="ItemCount" value="4"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_wood"/>
+	<drop event="Harvest" name="resourceWood" count="2" tag="allHarvest"/> <!-- harvest amount is 40% of the building cost -->
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="FilterTags" value="fdecor,fdoors"/> 
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0100"/> <!-- SortDoors -->
+</block>
+
+<block name="secureReinforcedDoorWooden1">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="DoorSecure"/>
+	<property name="Material" value="MwoodReinforced"/><property name="MaxDamage" value="250"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Tags" value="door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/wooden_door_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="35"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_wood"/>
+	<property name="CloseSound" value="close_door_wood"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="metalReinforcedDoorWooden1"/>
+		<property name="Item" value="resourceScrapIron"/>
+		<property name="ItemCount" value="12"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<property name="DowngradeBlock" value="secureDoorWooden"/>
+	<drop event="Harvest" name="resourceWood" count="2" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0105"/> <!-- SortDoors -->
+</block>
+
+<block name="metalReinforcedDoorWooden1">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="DoorSecure"/>
+	<property name="Material" value="MwoodMetal"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Tags" value="door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/wooden_door_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="35"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_wood"/>
+	<property name="CloseSound" value="close_door_wood"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="ironDoor1_v1"/>
+		<property name="Item" value="ironDoor1_v1"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="5"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<property name="DowngradeBlock" value="secureReinforcedDoorWooden1"/>
+	<drop event="Harvest" name="resourceScrapIron" count="6" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0110"/> <!-- SortDoors -->
+</block>
+
+<block name="ironDoor1_v1">
+	<property name="Class" value="DoorSecure"/>
+	<property name="DisplayType" value="blockHardenedMulti"/>
+	<property name="Material" value="Mmetal_hard"/> <!-- 2500 -->
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/steel_door_1_v1Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="77"/>
+	<property name="Mesh-Damage-1" value="Position/Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Position/Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Position/Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Position/Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Position/Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_metal"/>
+	<property name="CloseSound" value="close_door_metal"/>
+	<property class="RepairItems"> <property name="resourceForgedIron" value="10"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="ironDoor1_v21"/>
+		<property name="Item" value="resourceForgedIron"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="5"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<drop event="Harvest" name="resourceScrapIron" count="40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="60"/>
+	<property name="IndexName" value="TraderOnOff"/> <!-- flag this block to change to locked/unlocked if in a trader station -->
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0300"/> <!-- SortDoors -->
+</block>
+
+<block name="ironDoor1_v21">
+	<property name="Extends" value="ironDoor1_v1"/>
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Model" value="Entities/Doors/steel_door_1_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="ironDoor1_v31"/> </property>
+	<property name="DowngradeBlock" value="ironDoor1_v1"/>
+	<property name="SortOrder2" value="0305"/> <!-- SortDoors -->
+</block>
+
+<block name="ironDoor1_v31">
+	<property name="Extends" value="ironDoor1_v1"/>
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Model" value="Entities/Doors/steel_door_1_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="vaultDoor01"/>
+		<property name="Item" value="vaultDoor01"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="6"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<property name="DowngradeBlock" value="ironDoor1_v21"/>
+	<property name="SortOrder2" value="0310"/> <!-- SortDoors -->
+</block>
+
+<block name="commercialDoor1_v1">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="DoorSecure"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/commercial_door_1_v1Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="9"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_metal"/>
+	<property name="CloseSound" value="close_door_metal"/>
+	<property class="RepairItems"> <property name="resourceForgedIron" value="2"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="commercialDoor1_v21"/>
+		<property name="Item" value="resourceWood"/>
+		<property name="ItemCount" value="4"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_wood"/>
+	<drop event="Harvest" name="resourceScrapIron" count="8" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Destroy" name="resourceScrapBrass" count="2,7" prob="1" tag="WasteTreasuresDoorHarvest"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0200"/> <!-- SortDoors -->
+</block>
+
+<block name="commercialDoor1_v21">
+	<property name="Extends" value="commercialDoor1_v1"/>
+	<property name="Material" value="Mwood_regular"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="Texture" value="241"/>
+	<property name="Model" value="Entities/Doors/commercial_door_1_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="commercialDoor1_v31"/>
+		<property name="Item" value="resourceScrapIron"/>
+		<property name="ItemCount" value="20"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<property name="DowngradeBlock" value="commercialDoor1_v1"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<drop event="Harvest" name="resourceWood" count="2" prob="1" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="0" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceScrapBrass" count="0" prob="0" tag="WasteTreasuresDoorHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="SortOrder2" value="0205"/> <!-- SortDoors -->
+</block>
+
+<block name="commercialDoor1_v31">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="DoorSecure"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/commercial_door_1_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="9"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_metal"/>
+	<property name="CloseSound" value="close_door_metal"/>
+	<property name="DowngradeBlock" value="commercialDoor1_v21"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="20"/> </property>
+	<drop event="Harvest" name="resourceScrapIron" count="8" prob="1" tag="allHarvest"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<drop event="Destroy" count="0"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0210"/> <!-- SortDoors -->
+</block>
+
+<block name="commercialDoor2_v1">
+	<property name="Extends" value="commercialDoor1_v1"/>
+	<property name="Model" value="Entities/Doors/commercial_door_2_v1Prefab"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="commercialDoor2_v21"/> </property>
+	<property name="SortOrder2" value="0220"/> <!-- SortDoors -->
+</block>
+
+<block name="commercialDoor2_v21">
+	<property name="Extends" value="commercialDoor1_v21"/>
+	<property name="Model" value="Entities/Doors/commercial_door_2_v2Prefab"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="commercialDoor2_v31"/> </property>
+	<property name="DowngradeBlock" value="commercialDoor2_v1"/>
+	<property name="SortOrder2" value="0225"/> <!-- SortDoors -->
+</block>
+
+<block name="commercialDoor2_v31">
+	<property name="Extends" value="commercialDoor1_v31"/>
+	<property name="Model" value="Entities/Doors/commercial_door_2_v3Prefab"/>
+	<property name="DowngradeBlock" value="commercialDoor2_v21"/>
+	<property name="SortOrder2" value="0230"/> <!-- SortDoors -->
+</block>
+
+<block name="commercialDoor4_v1">
+	<property name="Extends" value="commercialDoor1_v1"/>
+	<property name="Model" value="Entities/Doors/commercial_door_4_v1Prefab"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="commercialDoor4_v21"/> </property>
+	<property name="SortOrder2" value="0260"/> <!-- SortDoors -->
+</block>
+
+<block name="commercialDoor4_v21">
+	<property name="Extends" value="commercialDoor1_v21"/>
+	<property name="Model" value="Entities/Doors/commercial_door_4_v2Prefab"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="commercialDoor4_v31"/> </property>
+	<property name="DowngradeBlock" value="commercialDoor4_v1"/>
+	<property name="SortOrder2" value="0265"/> <!-- SortDoors -->
+</block>
+
+<block name="commercialDoor4_v31">
+	<property name="Extends" value="commercialDoor1_v31"/>
+	<property name="Model" value="Entities/Doors/commercial_door_4_v3Prefab"/>
+	<property name="DowngradeBlock" value="commercialDoor4_v21"/>
+	<property name="SortOrder2" value="0270"/> <!-- SortDoors -->
+</block>
+
+<block name="houseFrontDoor1_v1">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="DoorSecure"/>
+	<property name="Material" value="Mwood_regular"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor1_v1Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_wood"/>
+	<property name="CloseSound" value="close_door_wood"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="houseFrontDoor1_v21"/>
+		<property name="Item" value="resourceWood"/>
+		<property name="ItemCount" value="4"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_wood"/>
+	<drop event="Harvest" name="resourceWood" count="2" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1" prob="1" tag="WasteTreasuresDoorHarvest"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0140"/> <!-- SortDoors -->
+</block>
+
+<block name="houseFrontDoor1_v21">
+	<property name="Extends" value="houseFrontDoor1_v1"/>
+	<property name="Material" value="Mwood_weak"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="Texture" value="241"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor1_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="houseFrontDoor1_v31"/>
+		<property name="Item" value="resourceScrapIron"/>
+		<property name="ItemCount" value="20"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<property name="DowngradeBlock" value="houseFrontDoor1_v1"/>
+	<drop event="Destroy" name="resourceScrapIron" count="0" prob="0" tag="WasteTreasuresDoorHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="SortOrder2" value="0145"/> <!-- SortDoors -->
+</block>
+
+<block name="houseFrontDoor1_v31">
+	<property name="Extends" value="commercialDoor1_v31"/>
+	<property name="Texture" value="241"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor1_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+	<property name="OpenSound" value="open_door_wood"/>
+	<property name="CloseSound" value="close_door_wood"/>
+	<property name="DowngradeBlock" value="houseFrontDoor1_v21"/>
+	<property name="SortOrder2" value="0150"/> <!-- SortDoors -->
+</block>
+
+<block name="houseFrontDoor2_v1">
+	<property name="Extends" value="houseFrontDoor1_v1"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor2_v1Prefab"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="70"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="houseFrontDoor2_v21"/> </property>
+	<property name="SortOrder2" value="0160"/> <!-- SortDoors -->
+</block>
+
+<block name="houseFrontDoor2_v21">
+	<property name="Extends" value="houseFrontDoor1_v21"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor2_v2Prefab"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="70"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="houseFrontDoor2_v31"/> </property>
+	<property name="DowngradeBlock" value="houseFrontDoor2_v1"/>
+	<property name="SortOrder2" value="0165"/> <!-- SortDoors -->
+</block>
+
+<block name="houseFrontDoor2_v31">
+	<property name="Extends" value="houseFrontDoor1_v31"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor2_v3Prefab"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="70"/>
+	<property name="DowngradeBlock" value="houseFrontDoor2_v21"/>
+	<property name="SortOrder2" value="0170"/> <!-- SortDoors -->
+</block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- NEW MODDED DOORS TO ALLOW PICKING VERSION 2/3 OF DOOR-->
+<!-- THESE USE VANILLA NAMES TO REPLACE IN PREFABS, USES MODDED CODED TO ALLOW PICKING -->
+
+
+<block name="secureReinforcedDoorWooden">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="MwoodReinforced"/><property name="MaxDamage" value="500"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/wooden_door_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property name="DowngradeBlock" value="pickedsecureReinforcedDoorWooden"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="5"/>
+		<property name="LockPickBreakChance" value="0.65"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="metalReinforcedDoorWooden">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="MwoodMetal"/><property name="MaxDamage" value="750"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/wooden_door_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
+	<property name="DowngradeBlock" value="pickedmetalReinforcedDoorWooden"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="10"/>
+		<property name="LockPickBreakChance" value="0.50"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="houseFrontDoor1_v2">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="MwoodMetal"/><property name="MaxDamage" value="500"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor1_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property name="DowngradeBlock" value="pickedhouseFrontDoor1_v2"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="5"/>
+		<property name="LockPickBreakChance" value="0.65"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="houseFrontDoor1_v3">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="MwoodMetal"/><property name="MaxDamage" value="750"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor1_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property name="DowngradeBlock" value="pickedhouseFrontDoor1_v3"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="10"/>
+		<property name="LockPickBreakChance" value="0.50"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="houseFrontDoor2_v2">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="MwoodMetal"/><property name="MaxDamage" value="500"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor2_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property name="DowngradeBlock" value="pickedhouseFrontDoor2_v2"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="5"/>
+		<property name="LockPickBreakChance" value="0.65"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="houseFrontDoor2_v3">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="MwoodMetal"/><property name="MaxDamage" value="750"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor2_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property name="DowngradeBlock" value="pickedhouseFrontDoor2_v3"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="10"/>
+		<property name="LockPickBreakChance" value="0.50"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="ironDoor1_v2">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Mmetal_hard"/><property name="MaxDamage" value="5000"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/steel_door_1_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceForgedIron" value="10"/> </property>
+	<property name="DowngradeBlock" value="pickedironDoor1_v2"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="10"/>
+		<property name="LockPickBreakChance" value="0.65"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="ironDoor1_v3">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Mmetal_hard"/><property name="MaxDamage" value="7500"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/steel_door_1_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceForgedIron" value="10"/> </property>
+	<property name="DowngradeBlock" value="pickedironDoor1_v3"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="20"/>
+		<property name="LockPickBreakChance" value="0.50"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="commercialDoor1_v2">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Mwood_regular"/><property name="MaxDamage" value="1000"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/commercial_door_1_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="20"/> </property>
+	<property name="DowngradeBlock" value="pickedcommercialDoor1_v2"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="15"/>
+		<property name="LockPickBreakChance" value="0.65"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="commercialDoor1_v3">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Mmetal"/><property name="MaxDamage" value="1500"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/commercial_door_1_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="20"/> </property>
+	<property name="DowngradeBlock" value="pickedcommercialDoor1_v3"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="30"/>
+		<property name="LockPickBreakChance" value="0.50"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="commercialDoor2_v2">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Mwood_regular"/><property name="MaxDamage" value="1000"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/commercial_door_2_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="20"/> </property>
+	<property name="DowngradeBlock" value="pickedcommercialDoor2_v2"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="15"/>
+		<property name="LockPickBreakChance" value="0.65"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="commercialDoor2_v3">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Mmetal"/><property name="MaxDamage" value="1500"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/commercial_door_2_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="20"/> </property>
+	<property name="DowngradeBlock" value="pickedcommercialDoor2_v3"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="30"/>
+		<property name="LockPickBreakChance" value="0.50"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="commercialDoor4_v2">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Mwood_regular"/><property name="MaxDamage" value="1000"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/commercial_door_4_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="20"/> </property>
+	<property name="DowngradeBlock" value="pickedcommercialDoor4_v2"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="15"/>
+		<property name="LockPickBreakChance" value="0.65"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+<block name="commercialDoor4_v3">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Tags" value="safes,door"/>
+	<property name="DisplayType" value="blockHardened"/>
+	<property name="Material" value="Mmetal"/><property name="MaxDamage" value="1500"/>
+	<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/commercial_door_4_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="LootList" value="11"/>
+	<property name="DescriptionKey" value="cntGunSafeDesc"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="20"/> </property>
+	<property name="DowngradeBlock" value="pickedcommercialDoor4_v3"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="30"/>
+		<property name="LockPickBreakChance" value="0.50"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="300"/>
+	<property name="FilterTags" value="floot,ffurniture"/>
+</block>
+
+
+<!-- PICKED DOORS -->
+
+<block name="pickedsecureDoorWooden">
+	<property name="Class" value="Door"/>
+	<property name="Material" value="Mwood_regular"/><property name="MaxDamage" value="250"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="FuelValue" value="200"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/wooden_door_v1Prefab"/> <property name="ModelOffset" value="0,0,0"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="35"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_wood"/>
+	<property name="CloseSound" value="close_door_wood"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="pickedsecureReinforcedDoorWooden"/>
+		<property name="Item" value="resourceWood"/>
+		<property name="ItemCount" value="4"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_wood"/>
+	<drop event="Harvest" name="resourceWood" count="2" tag="allHarvest"/> <!-- harvest amount is 40% of the building cost -->
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0100"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedsecureReinforcedDoorWooden">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="Door"/>
+	<property name="Material" value="MwoodReinforced"/><property name="MaxDamage" value="250"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Tags" value="door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/wooden_door_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="35"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_wood"/>
+	<property name="CloseSound" value="close_door_wood"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="pickedmetalReinforcedDoorWooden"/>
+		<property name="Item" value="resourceScrapIron"/>
+		<property name="ItemCount" value="12"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<property name="DowngradeBlock" value="pickedsecureDoorWooden"/>
+	<drop event="Harvest" name="resourceWood" count="2" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0105"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedmetalReinforcedDoorWooden">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="Door"/>
+	<property name="Material" value="MwoodMetal"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Tags" value="door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/wooden_door_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="35"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_wood"/>
+	<property name="CloseSound" value="close_door_wood"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
+	<property name="DowngradeBlock" value="pickedsecureReinforcedDoorWooden"/>
+	<drop event="Harvest" name="resourceScrapIron" count="6" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0110"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedironDoor1_v1">
+	<property name="Class" value="Door"/>
+	<property name="DisplayType" value="blockHardenedMulti"/>
+	<property name="Material" value="Mmetal_hard"/> <!-- 2500 -->
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/steel_door_1_v1Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="77"/>
+	<property name="Mesh-Damage-1" value="Position/Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Position/Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Position/Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Position/Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Position/Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_metal"/>
+	<property name="CloseSound" value="close_door_metal"/>
+	<property class="RepairItems"> <property name="resourceForgedIron" value="10"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="pickedironDoor1_v2"/>
+		<property name="Item" value="resourceForgedIron"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="5"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<drop event="Harvest" name="resourceScrapIron" count="40" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="60"/>
+	<property name="IndexName" value="TraderOnOff"/> <!-- flag this block to change to locked/unlocked if in a trader station -->
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0300"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedironDoor1_v2">
+	<property name="Extends" value="pickedironDoor1_v1"/>
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Model" value="Entities/Doors/steel_door_1_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="pickedironDoor1_v3"/> </property>
+	<property name="DowngradeBlock" value="pickedironDoor1_v1"/>
+	<property name="SortOrder2" value="0305"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedironDoor1_v3">
+	<property name="Extends" value="pickedironDoor1_v1"/>
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Model" value="Entities/Doors/steel_door_1_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="DowngradeBlock" value="pickedironDoor1_v2"/>
+	<property name="SortOrder2" value="0310"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedcommercialDoor1_v1">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="Door"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/commercial_door_1_v1Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="9"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_metal"/>
+	<property name="CloseSound" value="close_door_metal"/>
+	<property class="RepairItems"> <property name="resourceForgedIron" value="2"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="pickedcommercialDoor1_v2"/>
+		<property name="Item" value="resourceWood"/>
+		<property name="ItemCount" value="4"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_wood"/>
+	<drop event="Harvest" name="resourceScrapIron" count="8" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Destroy" name="resourceScrapBrass" count="2,7" prob="1" tag="WasteTreasuresDoorHarvest"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0200"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedcommercialDoor1_v2">
+	<property name="Extends" value="pickedcommercialDoor1_v1"/>
+	<property name="Material" value="Mwood_regular"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="Texture" value="241"/>
+	<property name="Model" value="Entities/Doors/commercial_door_1_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="pickedcommercialDoor1_v3"/>
+		<property name="Item" value="resourceScrapIron"/>
+		<property name="ItemCount" value="20"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<property name="DowngradeBlock" value="pickedcommercialDoor1_v1"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<drop event="Harvest" name="resourceWood" count="2" prob="1" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="0" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceScrapBrass" count="0" prob="0" tag="WasteTreasuresDoorHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="SortOrder2" value="0205"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedcommercialDoor1_v3">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="Door"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/commercial_door_1_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="9"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_metal"/>
+	<property name="CloseSound" value="close_door_metal"/>
+	<property name="DowngradeBlock" value="pickedcommercialDoor1_v2"/>
+	<property class="RepairItems"> <property name="resourceScrapIron" value="20"/> </property>
+	<drop event="Harvest" name="resourceScrapIron" count="8" prob="1" tag="allHarvest"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<drop event="Destroy" count="0"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0210"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedcommercialDoor2_v1">
+	<property name="Extends" value="pickedcommercialDoor1_v1"/>
+	<property name="Model" value="Entities/Doors/commercial_door_2_v1Prefab"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="pickedcommercialDoor2_v2"/> </property>
+	<property name="SortOrder2" value="0220"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedcommercialDoor2_v2">
+	<property name="Extends" value="pickedcommercialDoor1_v2"/>
+	<property name="Model" value="Entities/Doors/commercial_door_2_v2Prefab"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="pickedcommercialDoor2_v3"/> </property>
+	<property name="DowngradeBlock" value="pickedcommercialDoor2_v1"/>
+	<property name="SortOrder2" value="0225"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedcommercialDoor2_v3">
+	<property name="Extends" value="pickedcommercialDoor1_v3"/>
+	<property name="Model" value="Entities/Doors/commercial_door_2_v3Prefab"/>
+	<property name="DowngradeBlock" value="pickedcommercialDoor2_v2"/>
+	<property name="SortOrder2" value="0230"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedcommercialDoor4_v1">
+	<property name="Extends" value="pickedcommercialDoor1_v1"/>
+	<property name="Model" value="Entities/Doors/commercial_door_4_v1Prefab"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="pickedcommercialDoor4_v2"/> </property>
+	<property name="SortOrder2" value="0260"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedcommercialDoor4_v2">
+	<property name="Extends" value="pickedcommercialDoor1_v2"/>
+	<property name="Model" value="Entities/Doors/commercial_door_4_v2Prefab"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="pickedcommercialDoor4_v3"/> </property>
+	<property name="DowngradeBlock" value="pickedcommercialDoor4_v1"/>
+	<property name="SortOrder2" value="0265"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedcommercialDoor4_v3">
+	<property name="Extends" value="pickedcommercialDoor1_v3"/>
+	<property name="Model" value="Entities/Doors/commercial_door_4_v3Prefab"/>
+	<property name="DowngradeBlock" value="pickedcommercialDoor4_v2"/>
+	<property name="SortOrder2" value="0270"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedhouseFrontDoor1_v1">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="Door"/>
+	<property name="Material" value="Mwood_regular"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor1_v1Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_wood"/>
+	<property name="CloseSound" value="close_door_wood"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="pickedhouseFrontDoor1_v2"/>
+		<property name="Item" value="resourceWood"/>
+		<property name="ItemCount" value="4"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_wood"/>
+	<drop event="Harvest" name="resourceWood" count="2" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1" prob="1" tag="WasteTreasuresDoorHarvest"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0140"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedhouseFrontDoor1_v2">
+	<property name="Extends" value="pickedhouseFrontDoor1_v1"/>
+	<property name="Material" value="Mwood_weak"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="Texture" value="241"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor1_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="pickedhouseFrontDoor1_v3"/>
+		<property name="Item" value="resourceScrapIron"/>
+		<property name="ItemCount" value="20"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<property name="DowngradeBlock" value="pickedhouseFrontDoor1_v1"/>
+	<drop event="Destroy" name="resourceScrapIron" count="0" prob="0" tag="WasteTreasuresDoorHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="SortOrder2" value="0145"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedhouseFrontDoor1_v3">
+	<property name="Extends" value="pickedcommercialDoor1_v3"/>
+	<property name="Texture" value="241"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor1_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+	<property name="OpenSound" value="open_door_wood"/>
+	<property name="CloseSound" value="close_door_wood"/>
+	<property name="DowngradeBlock" value="pickedhouseFrontDoor1_v2"/>
+	<property name="SortOrder2" value="0150"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedhouseFrontDoor2_v1">
+	<property name="Extends" value="pickedhouseFrontDoor1_v1"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor2_v1Prefab"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="70"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="pickedhouseFrontDoor2_v2"/> </property>
+	<property name="SortOrder2" value="0160"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedhouseFrontDoor2_v2">
+	<property name="Extends" value="pickedhouseFrontDoor1_v2"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor2_v2Prefab"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="70"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="pickedhouseFrontDoor2_v3"/> </property>
+	<property name="DowngradeBlock" value="pickedhouseFrontDoor2_v1"/>
+	<property name="SortOrder2" value="0165"/> <!-- SortDoors -->
+</block>
+
+<block name="pickedhouseFrontDoor2_v3">
+	<property name="Extends" value="pickedhouseFrontDoor1_v3"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor2_v3Prefab"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="70"/>
+	<property name="DowngradeBlock" value="pickedhouseFrontDoor2_v2"/>
+	<property name="SortOrder2" value="0170"/> <!-- SortDoors -->
+</block>
+
+<!-- VAULT DOORS AREN'T PICKABLE OR IN THE UPGRADE PATH COMMENTED OUT AS NOT USED 
+
+<block name="pickedvaultDoor01">
+	<property name="Class" value="Door"/>
+	<property name="Material" value="Msteel"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> 
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> 
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/steel_door_2_v1Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockHardenedMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="77"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_vault"/>
+	<property name="CloseSound" value="close_door_vault"/>
+	<property class="RepairItems"> <property name="resourceForgedSteel" value="12"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="pickedvaultDoor02"/>
+		<property name="Item" value="resourceForgedSteel"/>
+		<property name="ItemCount" value="12"/>
+		<property name="UpgradeHitCount" value="6"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<drop event="Harvest" name="resourceScrapIron" count="96" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="432"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0340"/> 
+</block>
+
+<block name="pickedvaultDoor02">
+	<property name="Extends" value="pickedvaultDoor01"/>
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Model" value="Entities/Doors/steel_door_2_v2Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="pickedvaultDoor03"/> </property>
+	<property name="DowngradeBlock" value="pickedvaultDoor01"/>
+	<property name="SortOrder2" value="0345"/> 
+</block>
+
+<block name="pickedvaultDoor03">
+	<property name="DescriptionKey" value="doorGroupDesc"/>
+	<property name="Class" value="Door"/>
+	<property name="Material" value="Msteel"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="Place" value="Door"/> 
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> 
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Model" value="Entities/Doors/steel_door_2_v3Prefab"/><property name="ModelOffset" value="0,0,0"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="77"/>
+	<property name="DisplayType" value="blockHardenedMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="Mesh-Damage-1" value="Door/Door_DMG0"/>
+	<property name="Mesh-Damage-2" value="Door/Door_DMG1"/>
+	<property name="Mesh-Damage-3" value="Door/Door_DMG2"/>
+	<property name="Mesh-Damage-4" value="Door/Door_DMG3"/>
+	<property name="Mesh-Damage-5" value="Door/Door_DMG4"/>
+	<property name="OpenSound" value="open_door_vault"/>
+	<property name="CloseSound" value="close_door_vault"/>
+	<property class="RepairItems"> <property name="resourceForgedSteel" value="12"/> </property>
+	<property name="DowngradeBlock" value="pickedvaultDoor02"/>
+	<drop event="Harvest" name="resourceScrapIron" count="96" prob="1" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="FilterTags" value="fdecor,fdoors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0350"/> 
+</block>
+
+-->
+
+</append>
+</configs>
+
+
+
+
+

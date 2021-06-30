@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Su1C1dal 7DTD LockPicking Doors" />
+		<Description value="Turns doors that have been reinforced into lockpickable doors. Does not include vault doors or hatches. A18.4" />
+		<Author value="Su1C1daL" />
+		<Version value="1" compat="A18.4"  />
+		<Website value="https://github.com/Su1C1daL/Su1C1dal-7DTD-Mods" />
+	</ModInfo>
+</xml>
