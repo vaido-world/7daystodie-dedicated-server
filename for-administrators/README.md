@@ -25,3 +25,7 @@ You will get the **benefit of invicibility**, after you enable **Debug Menu** fo
 ### Toggle God Mode and Debug Menu
 While In-game, Press `F1` keyboard button.  
 In the **Command Console Prompt** type: `debugmenu on`
+
+### Teleportation example
+`listplayers`  
+`teleportplayer boqsc 1534`  
