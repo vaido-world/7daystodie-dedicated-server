@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="ESC_MENU" />
+		<Description value="In-game ESC UI conversion modlet for 7 Days To Die." />
+		<Author value="BoQsc" />
+		<Version value="18.4(b4)" />
+		<Website value="https://github.com/vaido-world/7daystodie-dedicated-server" />
+	</ModInfo>
+</xml>
