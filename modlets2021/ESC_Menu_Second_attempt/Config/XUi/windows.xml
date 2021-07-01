@@ -30,11 +30,11 @@
 							<label depth="3" width="547" height="32" name="ServerWebsiteURL" text="http://google.com"  style="press, hover" font_size="30" upper_case="false" />
 						</rect>
 						-->
-						<grid name="buttons" pos="0, 0" cols="1" width="250" cell_width="250" cell_height="56" arrangement="vertical" repeat_content="false" >
+				<grid name="buttons" pos="0, 0" cols="1" width="250" cell_width="250" cell_height="56" arrangement="vertical" repeat_content="false" >
 							<label name="InformationAboutServer" depth="3" text="&#10; [FFFFFF][Server Information] " font_size="18" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
 							<label name="InformationAboutServer" depth="3" text="[03F1F5]PVPE Open Free Community server [350XP][300%Loot] &#10; Server IP: 7dtd.vaido.world &#10;" font_size="18" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
-							<rect controller="ServerInfo"><label name="ServerDescription" />
-								<label depth="3" name="ServerWebsiteURL" text="http://7days.vaido.world"  style="press, hover" font_size="18" upper_case="false" />
+							<rect justify="center" controller="ServerInfo"><label name="ServerDescription" />
+								<label justify="center" depth="3" name="ServerWebsiteURL" text="http://7days.vaido.world"  style="press, hover" font_size="18" upper_case="false" />
 							</rect>
 							<label name="InformationAboutServer" depth="3" text="Server Website" font_size="18" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
 
