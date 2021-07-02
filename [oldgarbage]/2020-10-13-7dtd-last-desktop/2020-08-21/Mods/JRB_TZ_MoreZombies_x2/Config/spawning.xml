@@ -1,0 +1,136 @@
+<TZ_MoreZombiesx2>
+
+<!--Changes
+	x2 daytime zombies (not animal zombies)
+	Adds Night spawns (Half amount of zombies at night)
+	Adds ZombieBoss to city
+	Doubled respawn delay of ZombieBoss in City Wasteland (from 1 to 2)
+	Shortened respawn delay of friendly animals from 7 to 3
+	Friendly animals now only spawn during the day
+	Doubled respawndelay of ZombieDogGroup (from 1 to 2)
+	Doubled respawndelay of EnemyAnimalsWasteland in City Wasteland (from 1 to 2)
+	Changed respawn delay of EnemyAnimalsWasteland from 1 to 4 (compared to burnt forests' EnemyAnimalsBurntForest @ 7 for this decision) in Wasteland
+	Doubled respawndelay of zombies in Wasteland (from 1 to 2 day and night)
+-->
+	
+
+<!-- City -->
+	<!-- Removal -->
+	<remove xpath="/spawning/biome[@name='city']/spawn" />
+	<!-- Addition -->
+	<append xpath="/spawning/biome[@name='city']">
+		<!-- Animals -->
+		<spawn maxcount="1" respawndelay="2" time="Any" entitygroup="ZombieDogGroup" spawnDeadChance="0" /><!-- 1,1,Any -->
+		<!-- Day -->
+		<spawn maxcount="6" respawndelay="1" time="Day" entitygroup="ZombiesAll" spawnDeadChance="0" /><!-- 3,1,Day -->
+		<!-- Night -->
+		<spawn maxcount="3" respawndelay="1" time="Night" entitygroup="ZombiesNight" spawnDeadChance="0" /><!-- 5,1,Night -->
+		<!-- Any Time -->
+		<spawn maxcount="1" respawndelay="2" time="Any" entitygroup="ZombiesBoss" spawnDeadChance="0" /><!-- added zombieBoss -->
+	</append>
+
+
+<!-- City Wasteland -->
+	<!-- Removal -->
+	<remove xpath="/spawning/biome[@name='city_wasteland']/spawn" />
+	<!-- Addition -->
+	<append xpath="/spawning/biome[@name='city_wasteland']">
+		<!-- Animals -->
+		<spawn maxcount="1" respawndelay="2" time="Any" entitygroup="EnemyAnimalsWasteland" spawnDeadChance="0" /><!-- 1,1,Any -->
+		<!-- Day -->
+		<spawn maxcount="2" respawndelay="1" time="Day" entitygroup="ZombiesAll" spawnDeadChance="0" /><!-- 1,1,Day -->
+		<!-- Night  -->
+		<spawn maxcount="1" respawndelay="1" time="Night" entitygroup="ZombiesWastelandNight" spawnDeadChance="0" /><!-- 1,1,Night -->
+		<!-- Any Time -->
+		<spawn maxcount="1" respawndelay="2" time="Any" entitygroup="ZombiesBoss" spawnDeadChance="0" /><!-- 1,1,Any -->
+	</append>
+	
+	
+	<!-- Wasteland Hub-->
+	<!-- Removal -->
+	<remove xpath="/spawning/biome[@name='wasteland_hub']/spawn" />
+	<!-- Addition -->
+	<append xpath="/spawning/biome[@name='wasteland_hub']">
+		<!-- Animals -->
+		<spawn maxcount="1" respawndelay="2" time="Any" entitygroup="EnemyAnimalsWasteland" spawnDeadChance="0" /><!-- 1,1,Any -->
+		<!-- Day -->
+		<spawn maxcount="10" respawndelay="2" time="Day" entitygroup="ZombiesWasteland" spawnDeadChance="0" /><!-- 5,1,Day -->
+		<!-- Night  -->
+		<spawn maxcount="5" respawndelay="2" time="Night" entitygroup="ZombiesWastelandNight" spawnDeadChance="0" /><!-- 5,1,Night -->
+		<!-- Any Time -->
+	</append>
+
+
+<!-- Pine Forest -->
+	<!-- Removal -->
+	<remove xpath="/spawning/biome[@name='pine_forest']/spawn" />
+	<!-- Addition -->
+	<append xpath="/spawning/biome[@name='pine_forest']">
+		<!-- Animals -->
+		<spawn maxcount="1" respawndelay="7" time="Any" entitygroup="EnemyAnimalsForest" spawnDeadChance="0" /><!-- 1,7,Any -->
+		<spawn maxcount="1" respawndelay="3" time="Day" entitygroup="FriendlyAnimalsForest" spawnDeadChance="0" /><!-- 1,7,Any -->
+		<!-- Day -->
+		<spawn maxcount="4" respawndelay="4" time="Day" entitygroup="ZombiesAll" spawnDeadChance="0" /><!-- 2,4,Any -->
+		<!-- Night  -->
+		<spawn maxcount="2" respawndelay="4" time="Night" entitygroup="ZombiesNight" spawnDeadChance="0" /><!-- added ZombiesNight -->
+	</append>
+
+
+<!-- Desert -->
+	<!-- Removal -->
+	<remove xpath="/spawning/biome[@name='desert']/spawn" />
+	<!-- Addition -->
+	<append xpath="/spawning/biome[@name='desert']">
+		<!-- Animals  -->
+		<spawn maxcount="1" respawndelay="7" time="Any" entitygroup="EnemyAnimalsDesert" spawnDeadChance="0" /><!-- 1,7,Any -->
+		<spawn maxcount="1" respawndelay="3" time="Day" entitygroup="FriendlyAnimalsDesert" spawnDeadChance="0" /><!-- 1,7,Any -->
+		<!-- Day  -->
+		<spawn maxcount="4" respawndelay="4" time="Day" entitygroup="ZombiesAll" spawnDeadChance="0" /><!-- 2,4,Any -->
+		<!-- Night  -->
+		<spawn maxcount="2" respawndelay="4" time="Night" entitygroup="ZombiesNight" spawnDeadChance="0" /><!-- Added Night -->
+	</append>
+
+
+<!-- Wasteland -->
+	<!-- Removal -->
+	<remove xpath="/spawning/biome[@name='wasteland']/spawn" />
+	<!-- Addition -->
+	<append xpath="/spawning/biome[@name='wasteland']">
+		<!-- Animals  -->
+		<spawn maxcount="1" respawndelay="4" time="Any" entitygroup="EnemyAnimalsWasteland" spawnDeadChance="0" /><!-- 1,1,Any -->
+		<!-- Day  -->
+		<spawn maxcount="4" respawndelay="2" time="Day"	entitygroup="ZombiesAll" spawnDeadChance="0" /><!-- 2,1,Day -->
+		<!-- Night  -->
+		<spawn maxcount="2" respawndelay="2" time="Night" entitygroup="ZombiesWastelandNight" spawnDeadChance="0" /><!-- 2,1,Night -->
+	</append>
+
+
+<!-- Burnt Forest -->
+	<!-- Removal -->
+	<remove xpath="/spawning/biome[@name='burnt_forest']/spawn" />
+	<!-- Addition -->
+	<append xpath="/spawning/biome[@name='burnt_forest']">
+		<!-- Animals -->
+		<spawn maxcount="1" respawndelay="7" time="Any" entitygroup="EnemyAnimalsBurntForest" spawnDeadChance="0" /><!-- 1,7,Any -->
+		<!-- Day -->
+		<spawn maxcount="4" respawndelay="4" time="Day" entitygroup="ZombiesBurntForest" spawnDeadChance="0" /><!-- 2,4,Any -->
+		<!-- Night -->
+		<spawn maxcount="2" respawndelay="4" time="Night" entitygroup="ZombiesBurntForest" spawnDeadChance="0" /><!-- Added Night -->
+	</append>
+
+
+<!-- Snow -->
+	<!-- Removal -->
+	<remove xpath="/spawning/biome[@name='snow']/spawn" />
+	<!-- Addition -->
+	<append xpath="/spawning/biome[@name='snow']">
+		<!-- Animals  -->
+		<spawn maxcount="1" respawndelay="7" time="Any" entitygroup="EnemyAnimalsSnow" spawnDeadChance="0" /><!-- 1,7,Any -->
+		<spawn maxcount="1" respawndelay="3" time="Day" entitygroup="FriendlyAnimalsSnow" spawnDeadChance="0" /><!-- 1,7,Any -->
+		<!-- Day  -->
+		<spawn maxcount="2" respawndelay="4" time="Day" entitygroup="SnowZombies" spawnDeadChance="0" /><!-- 1,4,Any -->
+		<!-- Night  -->
+		<spawn maxcount="1" respawndelay="4" time="Night" entitygroup="SnowZombies" spawnDeadChance="0" /><!-- Added Night -->
+	</append>
+	
+</TZ_MoreZombiesx2>

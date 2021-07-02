@@ -1,0 +1,8 @@
+<configs>
+
+<!--	// Global Colors -->
+
+		<append xpath="/styles/global">
+			<style_entry name="menuElementsLBLPri"					value="255,255,255" />
+		</append>
+</configs>
