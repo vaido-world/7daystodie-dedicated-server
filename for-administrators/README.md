@@ -29,3 +29,7 @@ In the **Command Console Prompt** type: `debugmenu on`
 ### Teleportation example
 `listplayers`  
 `teleportplayer boqsc 1534`  
+
+
+### Blink teleportation using debugmenu
+`W + Shift and press Q` to quickly teleport forward.
