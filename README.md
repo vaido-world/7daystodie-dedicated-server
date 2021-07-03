@@ -52,3 +52,5 @@ To kill the session as steam user
 `screen -XS "steam/7DaysToDie_GameServer" quit`</s>
 > Note that this command doesn't work if the session is password protected.
 
+
+## `memcl` command in the in-game `F1` command line seems to regenerate the spawning of the zombies.
