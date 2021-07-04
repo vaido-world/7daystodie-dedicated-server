@@ -56,9 +56,9 @@ To kill the session as steam user
 ## `memcl` command in the in-game `F1` command line seems to regenerate some the spawning of the zombies.
 
 ## Monitoring the activity of the 7dtd server.
-Type `top` into the ssh terminal and look at the CPU usage. The CPU usage is percentage sum of multicore.
-Press `1` on a keyboard to get the information about general usage of CPU cores. 
-![image](https://user-images.githubusercontent.com/21064622/124396699-cbe79100-dd13-11eb-9716-f2e49da22aae.png)
+Type `top` into the ssh terminal and look at the CPU usage. The CPU usage is percentage sum of multicore.  
+Press `1` on a keyboard to get the information about general usage of CPU cores.   
+![image](https://user-images.githubusercontent.com/21064622/124396910-20d7d700-dd15-11eb-86c5-6ed8373711c4.png)
 
 
 
