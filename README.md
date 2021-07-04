@@ -58,7 +58,8 @@ To kill the session as steam user
 ## Monitoring the activity of the 7dtd server.
 Type `top` into the ssh terminal and look at the CPU usage. The CPU usage is percentage sum of multicore.  
 Press `1` on a keyboard to get the information about general usage of CPU cores.   
-![image](https://user-images.githubusercontent.com/21064622/124396910-20d7d700-dd15-11eb-86c5-6ed8373711c4.png)
+![image](https://user-images.githubusercontent.com/21064622/124396987-b1161c00-dd15-11eb-98ba-fee0dabe506c.png)
+
 
 
 
