@@ -55,6 +55,8 @@ To kill the session as steam user
 
 ## `memcl` command in the in-game `F1` command line seems to regenerate some the spawning of the zombies.
 
+## Remember to set MaxZombies in the serverconfig.xml to 650, same can be done to the MaxAnimals.
+
 ## Monitoring the activity of the 7dtd server.
 Type `top` into the ssh terminal and look at the CPU usage. The CPU usage is percentage sum of multicore.  
 Press `1` on a keyboard to get the information about general usage of CPU cores.   
