@@ -63,6 +63,9 @@ Press `1` on a keyboard to get the information about general usage of CPU cores.
 ![image](https://user-images.githubusercontent.com/21064622/124397041-04886a00-dd16-11eb-8ac8-e96b4813ac22.png)
 
 
+## Debugging the client side
+`C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data`  
+**Search for .txt log files named like:** output_log__2021-07-13__10-52-30.txt  
 
 
 
