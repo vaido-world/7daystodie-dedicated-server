@@ -33,3 +33,6 @@ In the **Command Console Prompt** type: `debugmenu on`
 
 ### Blink teleportation using debugmenu
 `W + Shift and press Q` to quickly teleport forward.
+
+
+### While using `debugmenu` ALT+P would stick your camera to a single position and allow to walk around.
