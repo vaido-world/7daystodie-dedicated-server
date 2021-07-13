@@ -37,4 +37,4 @@ In the **Command Console Prompt** type: `debugmenu on`
 
 ### While using `debugmenu` ALT+P would stick your camera to a single position and allow to walk around.
 
-### ALT + ] will trigger 3rd perspective camera.
+### Pressing keyboard button: `ALT` will trigger 3rd perspective camera.
