@@ -22,6 +22,8 @@ While the game is not running this way is possible as well
 steam://run/251570/connect/7dtd.vaido.world:26900  
 `steam://run/251570//+connect 7dtd.vaido.world:26900`
 
+Link click stats: https://cutt.ly/LmDkTlN-stats30
+
 Minimal_setup.zip - seem to have the most development
 linux.sh and linux-rewrite.bash - might be earlier versions.
 
