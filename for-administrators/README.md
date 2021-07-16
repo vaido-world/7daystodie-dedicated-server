@@ -55,7 +55,7 @@ Press (or hold) `G` to adjust the Prefab location (Mouse can be used to drag pro
 Press (or hold) `ALT + G` to adjust in other ways. (Mouse can be used to drag proportions)  
 Hold `ALT` to asses the Prefab location.  
 Pressing `Backspace` keyboard key will remove the markers.
-![image](https://user-images.githubusercontent.com/21064622/125899853-56611dec-38f2-4a9a-9758-2084d4e0f8af.png)
+![image](https://user-images.githubusercontent.com/21064622/125900895-ef65d1e6-f607-4929-b73c-2bae1dbfc555.png)
 
 
 https://user-images.githubusercontent.com/21064622/125900686-a328c29d-60aa-4a24-bb38-adbc64b0e08c.mp4
