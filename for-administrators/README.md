@@ -46,4 +46,15 @@ https://user-images.githubusercontent.com/21064622/125424201-f4d6690d-c06f-471d-
 
 https://user-images.githubusercontent.com/21064622/125423819-78db7a20-44dd-4a44-8f59-7af5a169f1c8.mp4
 
+### Exporting Prefabs
+
+`debugmenu`
+
+Press (or hold) `Z` keyboard key  
+Press (or hold) `G` to adjust the Prefab location
+Press (or hold) `ALT + G` to adjust in other ways.
+Hold `ALT` to asses the Prefab location.
+
+
+
 
