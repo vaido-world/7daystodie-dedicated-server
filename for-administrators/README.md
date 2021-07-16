@@ -61,3 +61,9 @@ Pressing `Backspace` keyboard key will remove the markers.
 https://user-images.githubusercontent.com/21064622/125900686-a328c29d-60aa-4a24-bb38-adbc64b0e08c.mp4
 
 
+### Importing Prefab
+
+The map should be loaded in the map editor, as dedicated server does not have functionality to import prefab.
+![image](https://user-images.githubusercontent.com/21064622/125901470-6de4ae40-b2a0-4126-be66-a8534b51769e.png)
+
+
