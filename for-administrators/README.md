@@ -51,9 +51,12 @@ https://user-images.githubusercontent.com/21064622/125423819-78db7a20-44dd-4a44-
 `debugmenu`
 
 Press (or hold) `Z` keyboard key  
-Press (or hold) `G` to adjust the Prefab location
-Press (or hold) `ALT + G` to adjust in other ways.
-Hold `ALT` to asses the Prefab location.
+Press (or hold) `G` to adjust the Prefab location   
+Press (or hold) `ALT + G` to adjust in other ways.  
+Hold `ALT` to asses the Prefab location.  
+Pressing `Backspace` keyboard key will remove the markers.
+![image](https://user-images.githubusercontent.com/21064622/125899853-56611dec-38f2-4a9a-9758-2084d4e0f8af.png)
+
 
 
 
