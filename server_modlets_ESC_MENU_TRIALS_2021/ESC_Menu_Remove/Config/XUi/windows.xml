@@ -1,0 +1,8 @@
+<configs>
+
+<!-- 	// In-game Menu -->
+
+		<remove xpath="/windows/window[@name='ingameMenu']" />
+
+
+</configs>
