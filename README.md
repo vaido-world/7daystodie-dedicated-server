@@ -1,4 +1,10 @@
 # 7daystodie-dedicated-server
+
+Latest steam effort 2024 
+[Mods.zip](https://github.com/vaido-world/7daystodie-dedicated-server/files/13933136/Mods.zip)
+
+
+
 ## Usage 
 ```
 apt-upgrade
@@ -16,6 +22,7 @@ While the game is running these can be used to connect to the server:
 steam://connect/94.176.237.38:26900  
 steam://connect/7dtd.vaido.world:26900/  
 ```
+
 
 `steam://connect/193.111.199.207:4868`     
 While the game is not running this way is possible as well    
