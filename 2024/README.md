@@ -6,3 +6,5 @@ https://www.nexusmods.com/7daystodie/mods/4180    Extra Game Options
 https://www.nexusmods.com/7daystodie/mods/4176 Increase Dew Collector Container Size
 
 https://www.nexusmods.com/7daystodie/mods/4174  Airdrop Spawn Zeds
+
+https://www.nexusmods.com/7daystodie/mods/4171?tab=description Vehicles Trigger Pressure Plates
