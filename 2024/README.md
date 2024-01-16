@@ -12,3 +12,6 @@ https://www.nexusmods.com/7daystodie/mods/4171?tab=description Vehicles Trigger 
 https://www.nexusmods.com/7daystodie/mods/4170?tab=description  Slower XP gain.
 
 https://www.nexusmods.com/7daystodie/mods/4169 Skill Point Reward
+
+
+https://www.nexusmods.com/7daystodie/mods/4159  Avoid Bloodmoon Injection
