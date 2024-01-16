@@ -15,3 +15,6 @@ https://www.nexusmods.com/7daystodie/mods/4169 Skill Point Reward
 
 
 https://www.nexusmods.com/7daystodie/mods/4159  Avoid Bloodmoon Injection
+
+
+https://www.nexusmods.com/7daystodie/mods/4160  increase Loot Bag Decay
