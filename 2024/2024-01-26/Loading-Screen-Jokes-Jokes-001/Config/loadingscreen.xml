@@ -1,0 +1,38 @@
+﻿<doc>
+    <!-- **************************************************************
+        It was such a lovely help feature, until...
+    *************************************************************** -->
+
+    <append xpath="/doc/tips">
+        <tip key="loadingJoke01"/>
+        <tip key="loadingJoke02"/>
+        <tip key="loadingJoke03"/>
+        <tip key="loadingJoke04"/>
+        <tip key="loadingJoke05"/>
+        <tip key="loadingJoke06"/>
+        <tip key="loadingJoke07"/>
+        <tip key="loadingJoke08"/>
+        <tip key="loadingJoke09"/>
+        <tip key="loadingJoke10"/>
+        <tip key="loadingJoke11"/>
+        <tip key="loadingJoke12"/>
+        <tip key="loadingJoke13"/>
+        <tip key="loadingJoke14"/>
+        <tip key="loadingJoke15"/>
+        <tip key="loadingJoke16"/>
+        <tip key="loadingJoke17"/>
+        <tip key="loadingJoke18"/>
+        <tip key="loadingJoke19"/>
+        <tip key="loadingJoke20"/>
+        <tip key="loadingJoke21"/>
+        <tip key="loadingJoke22"/>
+        <tip key="loadingJoke23"/>
+        <tip key="loadingJoke24"/>
+        <tip key="loadingJoke25"/>
+        <tip key="loadingJoke26"/>
+        <tip key="loadingJoke27"/>
+        <tip key="loadingJoke28"/>
+        <tip key="loadingJoke29"/>
+        <tip key="loadingJoke30"/>
+    </append>
+</doc>

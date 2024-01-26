@@ -1,0 +1,36 @@
+<configs>
+<append xpath="/controls">
+
+
+	<lesssimplebutton depth="3" pos="0,0" width="200" height="32"
+			enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" visible="true" enabled="true" bordersprite="menu_empty2px" bordercolor="[black]" pivot="left"
+			defaultsprite="menu_empty" defaultcolor="[mediumGrey]" hoversprite="ui_game_select_row" hovercolor="[white]" selectedsprite="ui_game_select_row" selectedcolor="[mediumGrey]"
+			foregroundlayer="true" tooltip_key="" sound="[default_click]" justify="center" caption="" caption_key="" font_size="28" upper_case="false" parse_actions="false" >
+		<rect name="${name}" depth="${depth}" pos="${pos}" width="${width}" height="${height}" enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}" controller="ServerInfo" visible="${visible}" button_enabled="${enabled}">
+			<sprite depth="2" name="border" sprite="${bordersprite}" pos="0,${Round(-height/2,0)}" color="${bordercolor}" type="sliced" fillcenter="false" foregroundlayer="true" pivot="${pivot}" />	
+			<label name="ServerDescription" />
+			<label  depth="10" pos="${pos}" width="${width}" height="${height}"  name="ServerWebsiteURL" text="testing" text_key="link2url" justify="center" style="press" color="0,0,0,1" font_size="300" upper_case="false" button_name="link2hover"/>
+			
+			<label depth="2" name="btnLabel" width="${width}" height="${height-2}" pos="0,${Round(-height/2,0)}" justify="${justify}" text="${caption}" text_key="${caption_key}" effect="outline" pivot="${pivot}" font_size="${font_size}" upper_case="${upper_case}" parse_actions="${parse_actions}" />
+			
+			<sprite depth="1" name="background" width="100%" height="100%" pos="0,0" color="[mediumGrey]" type="sliced" foregroundlayer="true" />
+	
+			<!--
+			<button name="clickable" pos="0,${Round(-height/2,0)}" sprite="${defaultsprite}" defaultcolor="${defaultcolor}" disabledcolor="[darkGrey]" hoversprite="${hoversprite}" hovercolor="${hovercolor}" selectedsprite="${selectedsprite}" selectedcolor="${selectedcolor}"  type="sliced" hoverscale="1.0" pivot="${pivot}" tooltip_key="${tooltip_key}" sound_play_on_hover="[default_hover]" sound="${sound}" > 
+			
+			<label depth="2" name="btnLabel" width="${width}" height="${height-2}" pos="0,${Round(-height/2,0)}" justify="${justify}" text="${caption}" text_key="${caption_key}" effect="outline" pivot="${pivot}" font_size="${font_size}" upper_case="${upper_case}" parse_actions="${parse_actions}" />
+
+			<label name="ServerDescription" />
+			<label foregroundlayer="true"  depth="10" pos="-100,90" width="300" height="300"  name="ServerWebsiteURL" text="testza" text_key="link2url" justify="center" style="press" color="0,0,0,1" font_size="300" upper_case="false" button_name="link2hover"/>
+
+			</button>
+			 -->
+			
+			
+			<!-- <label name="ServerWebsiteURL" text_key="link1url" style="press"  upper_case="false" button_name="link1hover" depth="1" width="${width}" height="${height-2}" pos="0,${Round(-height/2,0)}"      justify="${justify}" text="${caption}"  effect="outline" pivot="${pivot}" font_size="${font_size}"  parse_actions="${parse_actions}"/> -->
+
+
+		</rect>
+	</lesssimplebutton>
+</append>
+</configs>

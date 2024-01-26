@@ -1,0 +1,57 @@
+<configs>
+
+<!-- This mod seems to not work on multiplayer, maybe setting xpath needs to be delayed a few seconds when clicking join the server. -->
+<!-- Maybe loadingscreen is only loaded on 7dtd startup and not server join. Maybe it's reloaded/overwritten when clicking to join the server.  -->
+
+
+<!-- Set all backgrounds to a single background -->
+
+	<set xpath="/doc/backgrounds/tex[@file='GUI/loading_screen_1']/@file">@https://www.bhmpics.com/downloads/7-days-to-die-Wallpapers/4.ujrt5s1ttmh21.png</set>
+	<set xpath="/doc/backgrounds/tex[@file='GUI/loading_screen_2']/@file">@https://www.bhmpics.com/downloads/7-days-to-die-Wallpapers/4.ujrt5s1ttmh21.png</set>
+	<set xpath="/doc/backgrounds/tex[@file='GUI/loading_screen_3']/@file">@https://www.bhmpics.com/downloads/7-days-to-die-Wallpapers/4.ujrt5s1ttmh21.png</set>
+	<set xpath="/doc/backgrounds/tex[@file='GUI/loading_screen_4']/@file">@https://www.bhmpics.com/downloads/7-days-to-die-Wallpapers/4.ujrt5s1ttmh21.png</set>
+
+
+<!-- Remove all and add one as background.-->
+<!--
+	<remove xpath="/doc/backgrounds/tex[@file='GUI/loading_screen_1']" />
+	<remove xpath="/doc/backgrounds/tex[@file='GUI/loading_screen_2']" />
+	<remove xpath="/doc/backgrounds/tex[@file='GUI/loading_screen_3']" />
+	<remove xpath="/doc/backgrounds/tex[@file='GUI/loading_screen_4']" />
+
+	
+
+    <append xpath="/doc/backgrounds">
+		<tex file="@https://https://www.bhmpics.com/downloads/7-days-to-die-Wallpapers/4.ujrt5s1ttmh21.png" />
+    </append>
+-->
+	
+
+<!-- First trials and tests -->
+<!--
+    <append xpath="/doc/backgrounds">
+		<remove xpath="doc/backgrounds" />
+		<tex file="GUI/loading_screen_1" />
+		<tex file="@https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/server_modlets/image.png" />
+		<texture name="TEETX" depth="0" size="408,1080" pos="-150,550" texture="@https://raw.githubusercontent.com/vaido-world/7daystodie-dedicated-server/master/server_modlets/image.png" material="Materials/Transparent Colored" />
+	</append>	
+-->
+
+	
+	
+<!-- Random case from some other modlet.
+
+    <append xpath="doc/backgrounds">
+        <tex file="@modfolder:/Config/bgs/1.jpg" />
+        <tex file="@modfolder:/Config/bgs/2.jpg" />
+        <tex file="@modfolder:/Config/bgs/3.jpg" />
+        <tex file="@modfolder:/Config/bgs/4.jpg" />
+        <tex file="@modfolder:/Config/bgs/5.jpg" />
+        <tex file="@modfolder:/Config/bgs/6.jpg" />
+        <tex file="@modfolder:/Config/bgs/7.jpg" />
+        <tex file="@modfolder:/Config/bgs/8.jpg" />
+    </append>
+ -->
+ 
+
+</configs>

@@ -1,0 +1,69 @@
+<!-- 	//  beneath hp bar text -->
+
+<append xpath="/windows/window[@name='HUDLeftStatBars']">
+		<rect name="hud" anchor="CenterTop" pivot="topleft" pos="99,156" rows="2" cols="1" width="168" height="168" side="left">
+
+
+		<!-- sprite="ui_game_select_row" -->
+		<!-- sprite="menu_empty" -->
+			<label pivot="topleft" name="InformationAboutServer" depth="3" text="[03F1F5]PVPE Open Free Community server [1000XP][300%Loot] &#10; Server IP: 7days.vaido.world" font_size="180" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
+</append>
+
+
+
+<!-- 	//  compass text -->
+	<append xpath="/windows/window[@name='windowCompass']">
+		<rect name="hud" anchor="CenterTop" pivot="topleft" pos="10,10" rows="2" cols="1" width="168" height="168" side="left">
+
+
+		<!-- sprite="ui_game_select_row" -->
+		<!-- sprite="menu_empty" -->
+			<label anchor="CenterTop" pivot="topleft" name="InformationAboutServer" depth="3" text="[03F1F5]PVPE Open Free Community server [1000XP][300%Loot] &#10; Server IP: 7days.vaido.world" font_size="180" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
+		</rect>
+	</append>
+	
+</configs>
+	
+	
+	
+<!-- 	//  compass latesttext -->
+<configs>
+
+<!-- 	// In-game Menu -->
+	<append xpath="/windows/window[@name='windowCompass']">
+		<rect name="hud" pos="-100,10" rows="2" cols="1" width="168" height="168" side="left">
+
+
+		<!-- sprite="ui_game_select_row" -->
+		<!-- sprite="menu_empty" -->
+			<label anchor="CenterCenter" pivot="topleft" name="InformationAboutServer" depth="3" text="[03F1F5]PVPE Open Free Community server [1000XP][300%Loot] &#10; Server IP: 7days.vaido.world" font_size="180" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
+		</rect>
+	</append>
+	
+</configs>
+	
+
+
+
+Final
+
+
+<configs>
+
+<!-- 	// In-game Menu -->
+	<append xpath="/windows/window[@name='windowGroupBars']">
+		<rect name="hud" pos="0,0" rows="2" cols="1" width="168" height="168" side="left">
+
+
+		<!-- sprite="ui_game_select_row" -->
+		<!-- sprite="menu_empty" -->
+			<label anchor="CenterCenter" pivot="topleft" name="InformationAboutServer" depth="3" text="[03F1F5]7 Days To Die Vanilla Public Server" font_size="18" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_distance="1,1" upper_case="true" justify="center" />
+		</rect>
+	</append>
+	
+</configs>
+	
+	
+	
+	
+	

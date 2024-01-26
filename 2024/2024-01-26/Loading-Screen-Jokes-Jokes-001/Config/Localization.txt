@@ -1,0 +1,61 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+loadingJoke01,UI,Loading Screen,x,,Why are zombies never arrested? Cause they can never be taken alive!
+loadingJoke01_title,UI,Loading Screen,x,,Joke
+loadingJoke02,UI,Loading Screen,x,,What bread do zombies usually eat? Whole brain!
+loadingJoke02_title,UI,Loading Screen,x,,Joke
+loadingJoke03,UI,Loading Screen,x,,What is a zombie sleepover called? Mass grave!
+loadingJoke03_title,UI,Loading Screen,x,,Joke
+loadingJoke04,UI,Loading Screen,x,,What do vegetarian zombies eat? Graaaiinss!!
+loadingJoke04_title,UI,Loading Screen,x,,Joke
+loadingJoke05,UI,Loading Screen,x,,Why don't any zombies eat popcorn with their fingers? Zombies eat their fingers separately.
+loadingJoke05_title,UI,Loading Screen,x,,Joke
+loadingJoke06,UI,Loading Screen,x,,What do zombies say before a boxing match? They say: Do you want a piece of me?
+loadingJoke06_title,UI,Loading Screen,x,,Joke
+loadingJoke07,UI,Loading Screen,x,,Do you know where zombies live? On dead-end streets!
+loadingJoke07_title,UI,Loading Screen,x,,Joke
+loadingJoke08,UI,Loading Screen,x,,What do dyslexic zombies eat? Brians.
+loadingJoke08_title,UI,Loading Screen,x,,Joke
+loadingJoke09,UI,Loading Screen,x,,What is a zombie s favorite language? Latin because it is a dead language.
+loadingJoke09_title,UI,Loading Screen,x,,Joke
+loadingJoke10,UI,Loading Screen,x,,Why was the zombie comedian boo-ed off stage? Because most of the jokes he said had gone bad.
+loadingJoke10_title,UI,Loading Screen,x,,Joke
+loadingJoke11,UI,Loading Screen,x,,Why did the zombie get a bullet in the head? Because it asked for a high five.
+loadingJoke11_title,UI,Loading Screen,x,,Joke
+loadingJoke12,UI,Loading Screen,x,,Why didn't the zombie cross the road? Because it did not have the guts to walk.
+loadingJoke12_title,UI,Loading Screen,x,,Joke
+loadingJoke13,UI,Loading Screen,x,,Humans get arrested under Miranda rights but what do zombies get arrested under? Habeas Corpus people!
+loadingJoke13_title,UI,Loading Screen,x,,Joke
+loadingJoke14,UI,Loading Screen,x,,If the Joker actor was the only zombie in a web series what would it be called? The Joaquin Dead.
+loadingJoke14_title,UI,Loading Screen,x,,Joke
+loadingJoke15,UI,Loading Screen,x,,Which sea do zombies swim in? The Dead Sea!
+loadingJoke15_title,UI,Loading Screen,x,,Joke
+loadingJoke16,UI,Loading Screen,x,,What shampoo does a zombie wash his hair with? Head and Shoulders!
+loadingJoke16_title,UI,Loading Screen,x,,Joke
+loadingJoke17,UI,Loading Screen,x,,How does a zombie greet you? It says: Nice to eat you!
+loadingJoke17_title,UI,Loading Screen,x,,Joke
+loadingJoke18,UI,Loading Screen,x,,What did the zombie say when he was asked why he eats brains? A mind is a terrible thing to go to waste.
+loadingJoke18_title,UI,Loading Screen,x,,Joke
+loadingJoke19,UI,Loading Screen,x,,Why is it never wise to let a zombie cross the road alone? It might not have eyes.
+loadingJoke19_title,UI,Loading Screen,x,,Joke
+loadingJoke20,UI,Loading Screen,x,,What would you call an undead cheese? Maybe zom-brie.
+loadingJoke20_title,UI,Loading Screen,x,,Joke
+loadingJoke21,UI,Loading Screen,x,,Why do many zombies go to sleep early? They are dead tired.
+loadingJoke21_title,UI,Loading Screen,x,,Joke
+loadingJoke22,UI,Loading Screen,x,,During the zombie apocalypse what would be the most secure place on earth? Washington DC. They haven't got any brains down there.
+loadingJoke22_title,UI,Loading Screen,x,,Joke
+loadingJoke23,UI,Loading Screen,x,,Where should people go in case the zombies decide to rise? The retirement home no one there's gonna have the teeth to take a bite at you.
+loadingJoke23_title,UI,Loading Screen,x,,Joke
+loadingJoke24,UI,Loading Screen,x,,Why did the zombie stay home from school? He felt rotten!
+loadingJoke24_title,UI,Loading Screen,x,,Joke
+loadingJoke25,UI,Loading Screen,x,,What should you do if a zombie rolls their eyes at you? Roll them back to them.
+loadingJoke25_title,UI,Loading Screen,x,,Joke
+loadingJoke26,UI,Loading Screen,x,,Why do zombies prefer to eat straight-A students? Because they have big brains!
+loadingJoke26_title,UI,Loading Screen,x,,Joke
+loadingJoke27,UI,Loading Screen,x,,Why didn’t the zombie cross the road? Because there were no brains on the other side!
+loadingJoke27_title,UI,Loading Screen,x,,Joke
+loadingJoke28,UI,Loading Screen,x,,Why was the zombie shy? Because he was once bitten!
+loadingJoke28_title,UI,Loading Screen,x,,Joke
+loadingJoke29,UI,Loading Screen,x,,How did the zombie get ready for her dinner date? She got dressed up to kill!
+loadingJoke29_title,UI,Loading Screen,x,,Joke
+loadingJoke30,UI,Loading Screen,x,,What’s a zombie’s favorite drink? A shot of te-kill-ya!
+loadingJoke30_title,UI,Loading Screen,x,,Joke

@@ -1,0 +1,40 @@
+<configs>
+
+<!-- 	// In-game Menu -->
+
+
+		
+	<append xpath="/windows/window[@name='ingameMenu']/grid[@name='buttons']">
+	
+		<!-- sprite="ui_game_select_row" -->
+		<!-- sprite="menu_empty" -->
+		<!--
+		<button caption="Test" width="250" height="46" style="press" color="5,5,5,1" defaultsprite="menu_empty"  selectedsprite="ui_game_select_row" enabled_font_color="[labelColor]"  selectedcolor="[mediumGrey]" hovercolor="[white]" hoversprite="ui_game_select_row" foregroundlayer="true"  sound="[default_click]" controller="ServerInfo"> 
+			<label name="ServerDescription" />
+			<label text="&#10; [FFFFFF][Server Information] " depth="10" pos="0,0" width="250" height="46" name="ServerWebsiteURL" text_key="link1url" justify="center" style="press" color="5,5,5,1" font_size="30" upper_case="false" button_name="link1hover"/>
+		</button>
+
+		<simplebutton name="test1" depth="3" width="250" height="46" Caption="Join Steam Group"  font_size="40" />
+		-->
+		<lesssimplebutton name="test2" depth="3" width="250" height="46"  Caption="Steam Group" font_size="34" />
+	</append>
+	
+	
+	<append xpath="/windows/window[@name='ingameMenu']">
+		<grid name="buttons" pos="300, 10" cols="1" width="400" cell_width="400" cell_height="46" arrangement="vertical" repeat_content="false" >
+			
+			<label text="[FFFFFF][Server Information]" name="ESCAboutServer1" depth="3"  font_size="20" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_color="[black]" effect_distance="1,1" upper_case="true" justify="center" />
+
+			<label text="[e0ccbd]Server Name:[FFFFFF] 7 Days To Die Vanilla Public Server" name="ESCAboutServer1" depth="3"  font_size="20" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_color="[black]" effect_distance="1,1" upper_case="true" justify="left" />
+
+			<label text="[e0ccbd]Server IP:[FFFFFF] 51.178.20.227      [e0ccbd]Port:[FFFFFF] 62550" name="ESCAboutServer1" depth="3"  font_size="20" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_color="[black]" effect_distance="1,1" upper_case="true" justify="left" />
+			<label text="[e0ccbd]Server Description:[FFFFFF] Basic Vanilla Public Server." name="ESCAboutServer1" depth="3"  font_size="20" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_color="[black]" effect_distance="1,1" upper_case="true" justify="left" />
+			<label text="[FFFFFF]For more information and to stay connected join the [b9b9b9]Steam Group[FFFFFF]." name="ESCAboutServer1" depth="3"  font_size="20" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_color="[black]" effect_distance="1,1" upper_case="true" justify="left" />
+			<!--
+			<label text="[FFFFFF]~SERVER OWNER BoQsc" name="ESCAboutServer1" depth="3"  font_size="20" color="[menuElementsLBLPri]" crispness="Never" effect="outline" effect_color="[black]" effect_distance="1,1" upper_case="false" justify="right" />
+			-->
+		</grid>
+	</append>
+
+	
+</configs>
