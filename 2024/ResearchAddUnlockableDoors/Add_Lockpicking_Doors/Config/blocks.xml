@@ -1,0 +1,134 @@
+<configs>
+
+
+	<remove xpath="/blocks/block[starts-with(@name, 'exteriorHouseDoor')]/property" />
+	<append xpath="/blocks/block[starts-with(@name, 'exteriorHouseDoor')]">
+
+	<property name="Class" value="SecureLoot"/>
+	<property name="LootList" value="policeCars"/>
+	<property name="LockPickItem" value="resourceLockPick"/>
+	<property name="LockPickTime" value="5"/>
+	<property name="LockPickBreakChance" value="0.75"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="ItemTypeIcon" value="lock"/>
+	
+	<property name="OpenSound" value="door_wood_open"/>
+	<property name="CloseSound" value="door_wood_close"/>
+	<property name="IndexName" value="TraderOnOff"/>
+	
+	
+	<!-- Visual -->
+	<property name="Material" value="Mwood_regular"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/interiorHouseDoor/interiorHouseDoorPrefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	
+	<property name="LightOpacity" value="1"/>
+	<property name="WaterFlow" value="permitted"/>
+
+	<property name="Place" value="Door"/>
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="FilterTags" value="MC_building,SC_doors,A21_NEW"/>
+	<!--
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="@:Entities/Vehicles/Policecar/policeCarPrefab.prefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="2,2,5"/>
+	-->
+	
+
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="WaterFlow" value="permitted"/>
+	<!-- <property name="ParticleOnDeath" value="car_destruction_dmg1"/> -->
+	<!-- <property name="Place" value="TowardsPlacer"/>-->
+	<!--<property name="PlacementDistance" value="6"/>-->
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanDecorateOnSlopes" value="false"/>
+	<property name="MaxDamage" value="200"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LockPickDowngradeBlock" value="interiorHouseDoorWhiteUnsus"/>
+	<property name="DowngradeBlock" value="interiorHouseDoorWhiteUnsus"/>
+	<drop event="Destroy" count="0"/>
+	<property name="ShowModelOnFall" value="false"/>
+	<property name="SortOrder1" value="B867"/>
+	<property name="SortOrder2" value="0000"/>
+	<!-- <property name="FilterTags" value="MC_building,SC_automotive,A21_NEW"/>-->
+	<property name="DowngradeEvent" value="block_car_alarm_start" />
+
+
+
+	</append>
+
+
+
+	<append xpath="/blocks">
+	<block name="interiorHouseDoorWhiteUnsus">
+
+		<!-- Class -->
+		<property name="Class" value="Door"/>
+		<property name="OpenSound" value="door_wood_open"/>
+		<property name="CloseSound" value="door_wood_close"/>
+		<property name="IndexName" value="TraderOnOff"/>
+		<!-- UI_Info -->
+		<property name="CustomIconTint" value="E2DED3"/>
+		<property name="TintColor" value="E2DED3"/>
+		<property name="DescriptionKey" value="doorGroupDesc"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="Stacknumber" value="500"/>
+		<!-- Visual -->
+		<property name="Material" value="Mwood_regular"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Doors/interiorHouseDoor/interiorHouseDoorPrefab"/>
+		<property name="ModelOffset" value="0,0,0"/>
+		<property name="MultiBlockDim" value="1,2,1"/>
+		<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+		<property name="LightOpacity" value="1"/>
+		<property name="WaterFlow" value="permitted"/>
+		<!-- Placement -->
+		<property name="Place" value="Door"/>
+		<property name="PlaceEverywhere" value="true"/>
+		<property name="AllowAllRotations" value="true"/>
+		<property name="StabilitySupport" value="false"/>
+		<!-- Interaction -->
+		<property name="MaxDamage" value="250"/>
+		<property name="StartDamage" value="0"/>
+		<property name="PassThroughDamage" value="true"/>
+		<property name="Stage2Health" value="1"/>
+		<property name="MeshDamage" value="
+			Door/DMG0, 225,
+			Door/DMG1, 170,
+			Door/DMG2, 120,
+			Door/DMG3, 80,
+			-, 1
+			"/>
+		<property class="RepairItems">
+			<property name="resourceWood" value="10"/>
+		</property>
+		<property class="RepairItemsMeshDamage">
+			<property name="resourceScrapBrass" value="50"/>
+			<property name="resourceWood" value="1"/>
+		</property>
+		<drop event="Harvest" name="resourceWood" count="2" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceScrapBrass" count="40" tag="WasteTreasuresDoorHarvest"/>
+		<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+		<!-- Sorting -->
+		<property name="SortOrder1" value="B308"/>
+		<property name="SortOrder2" value="0000"/>
+		<property name="Group" value="Building,advBuilding"/>
+		<property name="Tags" value="door"/>
+		<property name="BlockTag" value="Door"/>
+		<property name="FilterTags" value="MC_building,SC_doors,A21_NEW"/>
+		</block>
+	</append>
+	
+
+
+
+
+</configs>
