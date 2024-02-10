@@ -1,3 +1,7 @@
+Inside world folder there is config dum folder that shows applied changes via modlets  
+C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\DedServerTest\Saves\Navezgane\My Game\ConfigsDump
+
+
 dll server mods need to disable EAC.
 
 
