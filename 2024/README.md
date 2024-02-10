@@ -1,5 +1,8 @@
 Inside world folder there is config dum folder that shows applied changes via modlets  
-C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\DedServerTest\Saves\Navezgane\My Game\ConfigsDump
+`C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\DedServerTest\Saves\Navezgane\My Game\ConfigsDump`
+
+
+launcher used as of now `start %GAMENAME% "-UserDataFolder=.\DedServerTest" -logfile "%LOGFILE%" -quit -batchmode -nographics -configfile=serverconfig.xml -dedicated`
 
 
 dll server mods need to disable EAC.
