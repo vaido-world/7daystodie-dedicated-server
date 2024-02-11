@@ -6,6 +6,9 @@ To check offline player id for bans and player management: `C:\Program Files (x8
 launcher used as of now `start %GAMENAME% "-UserDataFolder=.\DedServerTest" -logfile "%LOGFILE%" -quit -batchmode -nographics -configfile=serverconfig.xml -dedicated`
 
 
+The dedicated server launching console only shows locally loaded xml mod files.
+The client downloaded ones can be seen when you are joining a server by pressing F1.
+
 dll server mods need to disable EAC.
 
 
