@@ -21,6 +21,10 @@ apt install p7zip-full p7zip-rar
 tar -czvf Minimal_setup.tar.gz 7_Days_To_Die_Dedicated_Server
 ```
 
+```
+su steam
+```
+
 
 #### 2024-01
 Latest steam effort 2024 
