@@ -17,6 +17,9 @@ apt install p7zip-full p7zip-rar
 7z a "./Minimal_setup.zip" "./7_Days_To_Die_Dedicated_Server/"
 ```
 
+```
+tar -czvf Minimal_setup.tar.gz 7_Days_To_Die_Dedicated_Server
+```
 
 
 #### 2024-01
