@@ -2,6 +2,8 @@
 
 #### 2024-02-12
 
+`curl https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/Minimal_setup.zip -O`
+
 
 
 #### 2024-01
