@@ -5,7 +5,8 @@
 ```
 curl -L https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/Minimal_setup.zip -O
 unzip ./Minimal_setup.zip -d 7_Days_To_Die_Dedicated_Server
-rm ./Minimal_setup.zip 
+rm ./Minimal_setup.zip
+rm -rf ./7_Days_To_Die_Dedicated_Server/
 ```
 
 
