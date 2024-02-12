@@ -25,6 +25,10 @@ tar -czvf Minimal_setup.tar.gz 7_Days_To_Die_Dedicated_Server
 su steam
 ```
 
+```
+bash announce_server_about_update
+```
+
 
 #### 2024-01
 Latest steam effort 2024 
