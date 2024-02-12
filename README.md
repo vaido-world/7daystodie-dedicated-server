@@ -14,7 +14,7 @@ bash ./ubuntu-install-steamcmd-7dtd.bash
 
 ```
 apt -y install p7zip-full p7zip-rar
-7z a "./Minimal_setup.zip" "./7_Days_To_Die_Dedicated_Server/Minimal_setup/"
+7z a "./Minimal_setup.zip" "./7_Days_To_Die_Dedicated_Server/"
 ```
 
 ```
