@@ -7,6 +7,7 @@ curl -L "https://github.com/vaido-world/7daystodie-dedicated-server/raw/master/M
 unzip "./Minimal_setup.zip" -d 7_Days_To_Die_Dedicated_Server
 rm "./Minimal_setup.zip"
 cd "/root/7_Days_To_Die_Dedicated_Server/Minimal_setup/"
+bash ./ubuntu-install-steamcmd-7dtd.bash
 ```
 
 `rm -rf "./7_Days_To_Die_Dedicated_Server/"`
